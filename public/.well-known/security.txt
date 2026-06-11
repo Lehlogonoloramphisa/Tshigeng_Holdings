@@ -1,0 +1,4 @@
+Contact: mailto:tshigeng.buti@gmail.com
+Preferred-Languages: en
+Canonical: https://www.tshigengholdings.co.za/.well-known/security.txt
+Policy: https://www.tshigengholdings.co.za/security

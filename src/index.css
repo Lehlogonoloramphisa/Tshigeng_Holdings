@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+
+    --background: 0 0% 99%;
+    --foreground: 207 43% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 207 43% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 207 43% 10%;
+    --primary: 152 65% 16%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 205 62% 32%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 205 24% 94%;
+    --muted-foreground: 207 18% 42%;
+    --accent: 45 92% 58%;
+    --accent-foreground: 207 43% 10%;
+    --support-green: 146 49% 39%;
+    --support-green-foreground: 0 0% 100%;
+    --highlight-yellow: 45 92% 58%;
+    --highlight-yellow-foreground: 207 43% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 205 22% 88%;
+    --input: 205 22% 88%;
+    --ring: 152 65% 16%;
+    --chart-1: 152 65% 16%;
+    --chart-2: 205 62% 32%;
+    --chart-3: 45 92% 58%;
+    --chart-4: 30 60% 50%;
+    --chart-5: 280 30% 45%;
+    --radius: 0.75rem;
+
+    --sidebar-background: 207 64% 14%;
+    --sidebar-foreground: 205 24% 94%;
+    --sidebar-primary: 146 49% 39%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 207 50% 20%;
+    --sidebar-accent-foreground: 205 24% 94%;
+    --sidebar-border: 207 42% 24%;
+    --sidebar-ring: 146 49% 39%;
+    --brand-gradient: linear-gradient(135deg, rgba(42, 148, 93, 0.96), rgba(31, 86, 132, 0.96));
+  }
+
+  .dark {
+    --background: 207 52% 6%;
+    --foreground: 205 24% 95%;
+    --card: 207 45% 9%;
+    --card-foreground: 205 24% 95%;
+    --popover: 207 45% 9%;
+    --popover-foreground: 205 24% 95%;
+    --primary: 152 65% 16%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 205 62% 32%;
+    --secondary-foreground: 205 24% 95%;
+    --muted: 207 34% 14%;
+    --muted-foreground: 205 16% 64%;
+    --accent: 45 92% 58%;
+    --accent-foreground: 207 43% 10%;
+    --support-green: 146 49% 44%;
+    --support-green-foreground: 0 0% 100%;
+    --highlight-yellow: 45 92% 58%;
+    --highlight-yellow-foreground: 207 43% 10%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 207 34% 18%;
+    --input: 207 34% 18%;
+    --ring: 152 65% 16%;
+    --chart-1: 152 65% 16%;
+    --chart-2: 205 62% 42%;
+    --chart-3: 45 92% 58%;
+    --chart-4: 30 60% 55%;
+    --chart-5: 280 30% 55%;
+
+    --sidebar-background: 207 52% 5%;
+    --sidebar-foreground: 205 24% 92%;
+    --sidebar-primary: 146 49% 44%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 207 42% 12%;
+    --sidebar-accent-foreground: 205 24% 92%;
+    --sidebar-border: 207 34% 16%;
+    --sidebar-ring: 146 49% 44%;
+    --brand-gradient: linear-gradient(135deg, rgba(42, 148, 93, 0.96), rgba(31, 86, 132, 0.96));
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.5);
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+@layer utilities {
+  .bg-brand-gradient {
+    background-color: rgb(31 86 132);
+    background-image: var(--brand-gradient);
+  }
+
+  .bg-support-green {
+    background-color: hsl(var(--support-green));
+  }
+
+  .text-support-green {
+    color: hsl(var(--support-green));
+  }
+
+  .text-support-green-foreground {
+    color: hsl(var(--support-green-foreground));
+  }
+
+  .shadow-support-green {
+    --tw-shadow-color: hsl(var(--support-green) / 0.22);
+    --tw-shadow: var(--tw-shadow-colored);
+  }
+
+  .bg-highlight-yellow {
+    background-color: hsl(var(--highlight-yellow));
+  }
+
+  .text-highlight-yellow {
+    color: hsl(var(--highlight-yellow));
+  }
+
+  .text-highlight-yellow-foreground {
+    color: hsl(var(--highlight-yellow-foreground));
+  }
+
+  .shadow-highlight-yellow {
+    --tw-shadow-color: hsl(var(--highlight-yellow) / 0.28);
+    --tw-shadow: var(--tw-shadow-colored);
+  }
+
+  .bg-footer-green {
+    background-color: rgb(14 66 42);
+  }
+}
