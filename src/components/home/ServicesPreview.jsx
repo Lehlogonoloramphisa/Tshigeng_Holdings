@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Bug, Building2, Sparkles, Droplets, ArrowRight } from 'lucide-react';
+import { Bug, Sparkles, Droplets, ArrowRight } from 'lucide-react';
 import SectionHeading from '@/components/shared/SectionHeading';
 import ServiceCard from '@/components/shared/ServiceCard';
 import { Button } from '@/components/ui/button';

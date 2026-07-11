@@ -339,10 +339,10 @@ export default function Contact() {
                   Serving the People
                 </h3>
                 <p className="font-body text-sm text-muted-foreground leading-relaxed">
-                  Tshigeng Holdings serves clients across South Africa
-                  with facilities management, hygiene, pest control, commercial and industrial
-                  cleaning, and cleaning material supply. We support industrial, commercial,
-                  government, state enterprise, and domestic customers.
+                  Tshigeng Holdings serves clients across South Africa with facilities management, 
+                  pest control, hygiene, cleaning, and cleaning material supply. 
+                  We are committed to delivering reliable, high quality solutions that meet the needs of businesses, 
+                  organizations, and household
                 </p>
               </div>
             </motion.div>

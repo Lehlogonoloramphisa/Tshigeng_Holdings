@@ -1,16 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Target, Eye, Heart, Award, Users, Shield } from 'lucide-react';
+import { Target, Eye, Heart, Shield } from 'lucide-react';
 import SectionHeading from '@/components/shared/SectionHeading';
-import StatCounter from '@/components/shared/StatCounter';
 
 const TEAM_IMAGE = 'https://images.pexels.com/photos/8606292/pexels-photo-8606292.jpeg?auto=compress&cs=tinysrgb&w=1200';
 
 const values = [
   { icon: Shield, title: 'Reliability', description: 'We are reliable and always strive to keep our customers happy through consistent, professional service.' },
-  { icon: Users, title: 'Partnerships', description: 'We nurture a winning network of customers and suppliers, creating mutual and enduring value together.' },
-  { icon: Award, title: 'Productivity', description: 'We work to be highly effective, lean, and fast-moving while supporting client operations.' },
-  { icon: Heart, title: 'Customer First', description: 'We focus on seamless, responsive facility services that improve the user experience.' },
+  { icon: Heart, title: 'Customer Centricity', description: 'We focus on seamless, responsive facility services that improve the user experience.' },
   { icon: Target, title: 'Quality Delivery', description: 'We pay attention to site requirements, service standards, and the practical details that keep facilities operating well.' },
   { icon: Eye, title: 'Sustainability', description: 'We support safe, sustainable, and forward-thinking facilities that enhance productivity while reducing environmental impact.' },
 ];
@@ -38,8 +35,7 @@ export default function About() {
               <span className="text-highlight-yellow">Facility</span> Solutions
             </h1>
             <p className="mt-6 text-lg font-body text-white/70 leading-relaxed max-w-2xl">
-              Tshigeng Holdings is a black empowered company providing facilities management,
-              hygiene, pest control, cleaning, and cleaning chemical solutions across South Africa.
+              Tshigeng Holdings is a black empowered company providing pest control, hygiene, cleaning, and cleaning chemical solutions across South Africa.
             </p>
           </motion.div>
         </div>
@@ -78,19 +74,17 @@ export default function About() {
               </h2>
               <div className="space-y-4 font-body text-muted-foreground leading-relaxed">
                 <p>
-                  Tshigeng Holdings is a black empowered company started in 2011 under registration
-                  number CK No: 2011/056260/23. For more than a decade, the company has provided
-                  facilities management services including pest control, hygiene, commercial and
-                  industrial cleaning, and cleaning chemical supply.
+                  Tshigeng Holdings is black empowered company started in 2011 registration number CK NO: 2011/056260/23. The
+                  company has been  providing services for facilities management services such as, pest control,  hygiene, commercial and
+                  industrial cleaning and provision of cleaning chemicals for the past decade.
                 </p>
                 <p>
-                  The company has a national footprint and a diversified portfolio of products and
-                  services. Clients choose Tshigeng Holdings for practical support across commercial,
-                  industrial, hotel, educational, hospitality, and healthcare environments.
+                  Tshigeng Holdings enjoys national foot print with diversified portfolio of products and services
                 </p>
                 <p>
-                  We provide services where there is a need, partnering with clients to deliver
-                  customized, responsive facility services that help their operations run seamlessly.
+                  Tshigeng Holdings has been a service provider of choice in the provision of  facilities management. Clients enjoy our
+                  services, e.g, commercial, industrial, hotel, educational, hospitality and healthcare sectors. We provide services where
+                  there is a need, across the country
                 </p>
               </div>
             </motion.div>
@@ -112,11 +106,20 @@ export default function About() {
                 <Target className="w-7 h-7 text-support-green" />
               </div>
               <h3 className="font-heading text-2xl font-bold text-card-foreground mb-4">Our Mission</h3>
-              <p className="font-body text-muted-foreground leading-relaxed">
-                Deliver highly effective and efficient facility solutions that optimise resources,
-                extend asset life spans, and ensure our clients run seamlessly. We partner with clients
-                to deliver customized, responsive facility services that elevate the user experience.
-              </p>
+              <ul className="list-disc space-y-4 pl-5 font-body text-muted-foreground leading-relaxed">
+                <li>
+                  To deliver highly effective and efficient facility solutions that optimise resources, extend asset life
+                  spans, and ensure our clients run seamlessly.
+                </li>
+                <li>
+                  To partner with our clients to deliver customized, responsive facility services that elevate the user
+                  experience and support dynamic business needs.
+                </li>
+                <li>
+                  To create and maintain safe, sustainable, and forward-thinking facilities that enhance productivity
+                  while minimizing environmental impact.
+                </li>
+              </ul>
             </motion.div>
 
             <motion.div
@@ -130,11 +133,12 @@ export default function About() {
                 <Eye className="w-7 h-7 text-accent" />
               </div>
               <h3 className="font-heading text-2xl font-bold text-white mb-4">Our Vision</h3>
-              <p className="font-body text-white/70 leading-relaxed">
-                To make every facility we manage the best place to work, visit, and thrive by delivering
-                a seamless, customer-first experience. We create and maintain safe, sustainable, and
-                forward-thinking facilities that enhance productivity while minimizing environmental impact.
-              </p>
+              <ul className="list-disc space-y-4 pl-5 font-body text-white/70 leading-relaxed">
+                <li>
+                  To make every facility we manage the best place to work, visit, and thrive by delivering a seamless,
+                  customer-first experience.
+                </li>
+              </ul>
             </motion.div>
           </div>
         </div>
@@ -144,10 +148,9 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeading
             eyebrow="Our Foundation"
-            title="Values That Drive Every Decision"
-            description="These principles define how we work, who we partner with, and how we measure our success."
+            title="Core Values That Drive Every Decision"
           />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((v, index) => {
               const IconComp = v.icon;
               return (
@@ -157,7 +160,7 @@ export default function About() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.08 }}
-                  className="flex gap-5"
+                  className="flex items-start gap-5"
                 >
                   <div className="shrink-0 w-12 h-12 rounded-xl [background-color:hsl(var(--support-green)/0.1)] flex items-center justify-center">
                     <IconComp className="w-6 h-6 text-support-green" />
@@ -169,17 +172,6 @@ export default function About() {
                 </motion.div>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 md:py-20 bg-brand-gradient">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
-            <StatCounter value="2011" suffix="" label="Established" light />
-            <StatCounter value="4" suffix="" label="Core Service Lines" light />
-            <StatCounter value="5" suffix="+" label="Target Sectors" light />
-            <StatCounter value="10" suffix="+" label="Years of Service" light />
           </div>
         </div>
       </section>

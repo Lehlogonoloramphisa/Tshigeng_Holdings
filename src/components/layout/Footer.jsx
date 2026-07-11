@@ -5,7 +5,6 @@ import { Phone, Mail, MapPin, ArrowUpRight, ChevronRight } from 'lucide-react';
 const quickLinks = [
   { label: 'About Us', path: '/about' },
   { label: 'Our Services', path: '/services' },
-  { label: 'Clients', path: '/projects' },
   { label: 'Contact', path: '/contact' },
 ];
 

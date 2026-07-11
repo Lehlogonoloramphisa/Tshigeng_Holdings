@@ -23,22 +23,22 @@ const services = [
   {
     icon: Bug,
     title: 'Pest Control',
-    description: 'Commercial and industrial pest control delivered with responsiveness, site awareness, and a focus on safer operating environments.',
-    features: ['Commercial Pest Control', 'Industrial Pest Control', 'Site Support', 'Safer Facility Environments'],
+    description: 'Commercial and pest control delivered with responsiveness, site awareness, and a focus on safer operating environments.',
+    features: ['Commercial Pest Control', ' Pest Control', 'Site Support', 'Safer Facility Environments'],
     image: IMAGES.pestControl,
   },
   {
     icon: Sparkles,
-    title: 'Commercial & Industrial Cleaning',
-    description: 'Cleaning support for commercial and industrial facilities, including specialist requirements and high-need environments.',
-    features: ['Commercial Cleaning', 'Industrial Cleaning', 'Residential Cleaning'],
+    title: 'Commercial Cleaning',
+    description: 'Professional cleaning services for offices, retail spaces, residential, educational, healthcare facilities, and other commercial environments. We deliver reliable, high quality cleaning solutions tailored to your operational needs.',
+    features: ['Commercial Cleaning', 'Residential Cleaning'],
     image: IMAGES.cleaning,
   },
   {
     icon: Building2,
     title: 'Cleaning Materials',
     description: 'Supply of cleaning equipment, chemicals, and consumables for facilities that need dependable products and responsive procurement support.',
-    features: ['Cleaning Equipment', 'Cleaning Chemicals', 'Consumables', 'Operational Essentials', 'Supply Coordination'],
+    features: ['Cleaning Equipment', 'Cleaning Chemicals', 'Consumables', 'Supply Coordination'],
     image: IMAGES.cleaningMaterials,
   },
 ];
@@ -65,9 +65,8 @@ export default function Services() {
               <span className="text-highlight-yellow">Cleaning</span>, & Hygiene Services
             </h1>
             <p className="mt-6 text-lg font-body text-white/70 leading-relaxed max-w-2xl">
-              We deliver hygiene, pest control, commercial and industrial cleaning, and cleaning
-              materials for clients across commercial, industrial, government, state enterprise,
-              education, hospitality, healthcare, and domestic sectors.
+              We deliver hygiene, pest control, cleaning, and cleaning supply solutions to clients across the business, 
+              education, hospitality, healthcare, and residential sectors.
             </p>
           </motion.div>
         </div>
@@ -130,35 +129,6 @@ export default function Services() {
               </motion.div>
             );
           })}
-        </div>
-      </section>
-
-      <section className="py-20 md:py-28 bg-brand-gradient">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-white mb-6">
-              How We Work
-            </h2>
-            <p className="font-body text-white/70 mb-6 leading-relaxed">
-              <strong className="text-white">Understand</strong> - We clarify the facility requirement, site needs, and success criteria.<br />
-              <strong className="text-white">Plan</strong> - We coordinate the right people, products, chemicals, and service schedule.<br />
-              <strong className="text-white">Deliver</strong> - We communicate progress and complete the work professionally.
-            </p>
-            <Link to="/contact">
-              <Button
-                size="lg"
-                className="bg-accent text-accent-foreground hover:bg-accent/90 font-body font-semibold px-8 py-6 text-base shadow-2xl shadow-accent/30"
-              >
-                Schedule a Site Assessment
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-            </Link>
-          </motion.div>
         </div>
       </section>
     </div>
