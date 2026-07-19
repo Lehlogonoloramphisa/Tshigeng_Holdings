@@ -18,10 +18,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v6
 
-      - name: Test FTP server DNS
-        shell: bash
-        run: |
-          nslookup ftp.tshigengholdings.co.za
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Build
+        run: npm run build
 
       - name: Deploy to Afrihost
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
@@ -31,14 +41,5 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
           port: 21
-          local-dir: ./
+          local-dir: ./dist/
           server-dir: ./public_html/
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/.github/**
-            **/node_modules/**
-            **/.env
-            **/.env.*
-            **/storage/logs/**
-            README.md
