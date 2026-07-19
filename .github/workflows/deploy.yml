@@ -4,16 +4,27 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v6
 
-      - name: FTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Test FTP server DNS
+        shell: bash
+        run: |
+          nslookup ftp.tshigengholdings.co.za
+
+      - name: Deploy to Afrihost
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
@@ -24,6 +35,10 @@ jobs:
           server-dir: ./public_html/
           exclude: |
             **/.git*
+            **/.git*/**
             **/.github/**
             **/node_modules/**
             **/.env
+            **/.env.*
+            **/storage/logs/**
+            README.md
