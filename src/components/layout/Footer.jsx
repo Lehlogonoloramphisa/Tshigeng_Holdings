@@ -15,14 +15,6 @@ const serviceLinks = [
   { label: 'Cleaning Supplies', path: '/cleaning-supplies' },
 ];
 
-const locationLinks = [
-  { label: 'Pest Control Pretoria', path: '/pest-control-pretoria' },
-  { label: 'Pest Control Johannesburg', path: '/pest-control-johannesburg' },
-  { label: 'Pest Control Centurion', path: '/pest-control-centurion' },
-  { label: 'Cleaning Services Pretoria', path: '/cleaning-services-pretoria' },
-  { label: 'Hygiene Services Gauteng', path: '/hygiene-services-gauteng' },
-];
-
 const legalLinks = [
   { label: 'Privacy Policy', path: '/privacy-policy' },
   { label: 'Cookie Policy', path: '/cookie-policy' },
@@ -54,7 +46,7 @@ export default function Footer() {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           <div className="lg:col-span-1">
             <div className="mb-6">
               <img
@@ -100,25 +92,6 @@ export default function Footer() {
                   >
                     <ChevronRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {service.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h5 className="font-body text-sm font-semibold tracking-wider uppercase text-accent mb-6">
-              Service Areas
-            </h5>
-            <ul className="space-y-3">
-              {locationLinks.map((location) => (
-                <li key={location.path}>
-                  <Link
-                    to={location.path}
-                    className="text-sm text-primary-foreground/70 hover:text-accent transition-colors font-body flex items-center gap-2 group"
-                  >
-                    <ChevronRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    {location.label}
                   </Link>
                 </li>
               ))}
