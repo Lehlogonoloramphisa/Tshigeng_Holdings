@@ -23,8 +23,8 @@ const services = [
   {
     icon: Bug,
     title: 'Pest Control',
-    description: 'Commercial and pest control delivered with responsiveness, site awareness, and a focus on safer operating environments.',
-    features: ['Commercial Pest Control', ' Pest Control', 'Site Support', 'Safer Facility Environments'],
+    description: 'Commercial and residential pest control delivered with responsiveness, site awareness, and a focus on safer operating environments.',
+    features: ['Commercial Pest Control', 'Residential Pest Control', 'Site Support', 'Safer Facility Environments'],
     image: IMAGES.pestControl,
   },
   {

@@ -342,7 +342,7 @@ export default function Contact() {
                   Tshigeng Holdings serves clients across South Africa with facilities management, 
                   pest control, hygiene, cleaning, and cleaning material supply. 
                   We are committed to delivering reliable, high quality solutions that meet the needs of businesses, 
-                  organizations, and household
+                  organizations, and households.
                 </p>
               </div>
             </motion.div>

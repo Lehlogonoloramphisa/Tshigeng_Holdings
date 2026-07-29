@@ -142,8 +142,8 @@ export default function Navbar() {
                 <a href="tel:+27727006135" className="flex items-center gap-2">
                   <Phone className="w-4 h-4" /> +27 72 700 6135
                 </a>
-                <a href="mailto:info@tshholdings.co.za" className="flex items-center gap-2">
-                  <Mail className="w-4 h-4" /> info@tshholdings.co.za
+                <a href="mailto:tshigeng.buti@gmail.com" className="flex items-center gap-2">
+                  <Mail className="w-4 h-4" /> tshigeng.buti@gmail.com
                 </a>
               </div>
             </div>
