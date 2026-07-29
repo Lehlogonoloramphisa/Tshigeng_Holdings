@@ -19,6 +19,7 @@ const services = [
     description: 'Supply, installation, maintenance, and servicing of essential hygiene equipment for clean, practical, and well-managed facilities.',
     features: ['Soap Dispensers', 'Ladies Sanitary Bins', 'Toilet Seat Wipes', 'Paper Towel Dispensers', 'Air Fresheners', 'Chemical Deep Cleaning'],
     image: IMAGES.hygiene,
+    path: '/hygiene-services',
   },
   {
     icon: Bug,
@@ -26,6 +27,7 @@ const services = [
     description: 'Commercial and residential pest control delivered with responsiveness, site awareness, and a focus on safer operating environments.',
     features: ['Commercial Pest Control', 'Residential Pest Control', 'Site Support', 'Safer Facility Environments'],
     image: IMAGES.pestControl,
+    path: '/pest-control',
   },
   {
     icon: Sparkles,
@@ -33,6 +35,7 @@ const services = [
     description: 'Professional cleaning services for offices, retail spaces, residential, educational, healthcare facilities, and other commercial environments. We deliver reliable, high quality cleaning solutions tailored to your operational needs.',
     features: ['Commercial Cleaning', 'Residential Cleaning'],
     image: IMAGES.cleaning,
+    path: '/cleaning-services',
   },
   {
     icon: Building2,
@@ -40,6 +43,7 @@ const services = [
     description: 'Supply of cleaning equipment, chemicals, and consumables for facilities that need dependable products and responsive procurement support.',
     features: ['Cleaning Equipment', 'Cleaning Chemicals', 'Consumables', 'Supply Coordination'],
     image: IMAGES.cleaningMaterials,
+    path: '/cleaning-supplies',
   },
 ];
 
@@ -119,12 +123,20 @@ export default function Services() {
                       </li>
                     ))}
                   </ul>
-                  <Link to="/contact">
-                    <Button className="bg-primary text-primary-foreground hover:bg-primary/90 font-body font-semibold">
-                      Request This Service
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Button>
-                  </Link>
+                  <div className="flex flex-col gap-3 sm:flex-row">
+                    <Link to={service.path}>
+                      <Button className="bg-primary text-primary-foreground hover:bg-primary/90 font-body font-semibold">
+                        View Service Details
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </Button>
+                    </Link>
+                    <Link to="/contact">
+                      <Button variant="outline" className="font-body font-semibold hover:bg-primary hover:text-primary-foreground">
+                        Request This Service
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </Button>
+                    </Link>
+                  </div>
                 </div>
               </motion.div>
             );

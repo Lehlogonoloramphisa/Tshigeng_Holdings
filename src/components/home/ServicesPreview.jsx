@@ -13,18 +13,21 @@ export default function ServicesPreview({ images }) {
       title: 'Pest Control',
       description: 'Pest control for homes and businesses in Gauteng and North West Province.',
       image: images.pestControl,
+      path: '/pest-control',
     },
     {
       icon: Droplets,
       title: 'Hygiene Services',
       description: 'Supply, installation, maintenance, and servicing of hygiene equipment.',
       image: images.hygiene,
+      path: '/hygiene-services',
     },
     {
       icon: Sparkles,
       title: 'Commercial & Industrial Cleaning',
       description: 'We are a leading provider of outsourced cleaning services for homes, offices and commercial building, specializing in both once-off cleaning services and long term cleaning contracts',
       image: images.cleaning,
+      path: '/cleaning-services',
     },
   ];
 

@@ -8,9 +8,12 @@ import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 
 import Layout from './components/layout/Layout';
 import Seo from './components/seo/Seo';
+import { locationLandingPages, serviceLandingPages } from './data/seoLandingPages';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
+import ServiceLanding from './pages/ServiceLanding';
+import LocationLanding from './pages/LocationLanding';
 import Contact from './pages/Contact';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import CookiePolicy from './pages/CookiePolicy';
@@ -50,6 +53,12 @@ const AuthenticatedApp = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
+          {Object.entries(serviceLandingPages).map(([path, page]) => (
+            <Route key={path} path={path} element={<ServiceLanding page={page} />} />
+          ))}
+          {Object.entries(locationLandingPages).map(([path, page]) => (
+            <Route key={path} path={path} element={<LocationLanding page={page} />} />
+          ))}
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/cookie-policy" element={<CookiePolicy />} />

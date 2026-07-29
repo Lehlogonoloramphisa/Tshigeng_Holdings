@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { landingPageMeta, locationLandingPages, serviceLandingPages } from '@/data/seoLandingPages';
 
 const SITE_URL = 'https://tshigengholdings.co.za';
 const SITE_NAME = 'Tshigeng Holdings';
@@ -54,6 +55,7 @@ const pageMeta = {
     description: 'Read the Tshigeng Holdings website security policy.',
     robots: 'noindex, follow',
   },
+  ...landingPageMeta,
 };
 
 const businessSchema = {
@@ -113,6 +115,71 @@ const websiteSchema = {
     },
   },
 };
+
+function buildPageSchema(path, meta, canonical) {
+  const servicePage = serviceLandingPages[path];
+  const locationPage = locationLandingPages[path];
+  const page = servicePage || locationPage;
+
+  const schemas = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      name: meta.title,
+      description: meta.description,
+      url: canonical,
+      isPartOf: {
+        '@type': 'WebSite',
+        name: SITE_NAME,
+        url: SITE_URL,
+      },
+      about: page?.searchFocus || page?.services || undefined,
+      keywords: meta.keywords,
+    },
+  ];
+
+  if (page) {
+    schemas.push({
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      name: page.title,
+      description: page.description,
+      provider: {
+        '@type': 'LocalBusiness',
+        name: SITE_NAME,
+        url: SITE_URL,
+        telephone: '+27727006135',
+      },
+      areaServed: locationPage
+        ? {
+            '@type': 'Place',
+            name: locationPage.location,
+          }
+        : {
+            '@type': 'Country',
+            name: 'South Africa',
+          },
+      serviceType: page.service || page.title,
+    });
+
+    if (page.faqs?.length) {
+      schemas.push({
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: page.faqs.map((faq) => ({
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.answer,
+          },
+        })),
+      });
+    }
+  }
+
+  return schemas;
+}
 
 function normalizePath(pathname) {
   if (!pathname || pathname === '/') return '/';
@@ -188,7 +255,11 @@ export default function Seo() {
       schemaScript.type = 'application/ld+json';
       document.head.appendChild(schemaScript);
     }
-    schemaScript.textContent = JSON.stringify([businessSchema, websiteSchema]);
+    schemaScript.textContent = JSON.stringify([
+      businessSchema,
+      websiteSchema,
+      ...buildPageSchema(path, meta, canonical),
+    ]);
   }, [location.pathname]);
 
   return null;
