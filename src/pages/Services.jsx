@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Bug, Building2, Sparkles, Droplets, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Bug, Building2, Sparkles, Droplets, CheckCircle2, ArrowRight, Home as HomeIcon, ClipboardList, Wrench } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 
@@ -16,26 +16,42 @@ const services = [
   {
     icon: Droplets,
     title: 'Hygiene Services',
-    description: 'Supply, installation, maintenance, and servicing of essential hygiene equipment for clean, practical, and well-managed facilities.',
-    features: ['Soap Dispensers', 'Ladies Sanitary Bins', 'Toilet Seat Wipes', 'Paper Towel Dispensers', 'Air Fresheners', 'Chemical Deep Cleaning'],
+    description: 'We supply, install, maintain, and service soap dispensers, air hand dryers, ladies sanitary bins, toilet seat wipes, paper towel dispensers, and air fresheners, and provide chemical deep cleaning.',
+    features: ['Soap Dispensers', 'Air Hand Dryers', 'Ladies Sanitary Bins', 'Toilet Seat Wipes', 'Paper Towel Dispensers', 'Air Fresheners', 'Chemical Deep Cleaning'],
     image: IMAGES.hygiene,
     path: '/hygiene-services',
   },
   {
     icon: Bug,
     title: 'Pest Control',
-    description: 'Commercial and residential pest control delivered with responsiveness, site awareness, and a focus on safer operating environments.',
-    features: ['Commercial Pest Control', 'Residential Pest Control', 'Site Support', 'Safer Facility Environments'],
+    description: 'Commercial and industrial pest control for business premises, factories, warehouses, and managed facilities.',
+    features: ['Commercial Pest Control', 'Industrial Pest Control', 'Site Support', 'Pest Control Contracts'],
     image: IMAGES.pestControl,
     path: '/pest-control',
   },
   {
     icon: Sparkles,
-    title: 'Commercial Cleaning',
-    description: 'Professional cleaning services for offices, retail spaces, residential, educational, healthcare facilities, and other commercial environments. We deliver reliable, high quality cleaning solutions tailored to your operational needs.',
-    features: ['Commercial Cleaning', 'Residential Cleaning'],
+    title: 'Commercial & Industrial Cleaning',
+    description: 'Commercial and industrial cleaning for offices, facilities, and managed buildings, including high-rise cleaning and industrial duct cleaning.',
+    features: ['Commercial cleaning', 'Industrial cleaning', 'High-rise cleaning', 'Industrial duct cleaning'],
     image: IMAGES.cleaning,
-    path: '/cleaning-services',
+    path: '/commercial-cleaning',
+  },
+  {
+    icon: HomeIcon,
+    title: 'Residential Cleaning',
+    description: 'Once-off and recurring home cleaning enquiries for Centurion, Pretoria, and surrounding Gauteng areas.',
+    features: ['Routine home cleaning', 'Kitchen and bathroom cleaning', 'Once-off cleaning enquiries'],
+    image: IMAGES.cleaning,
+    path: '/residential-cleaning',
+  },
+  {
+    icon: ClipboardList,
+    title: 'Commercial Cleaning Contracts',
+    description: 'Recurring cleaning arrangements scoped around the building, service schedule, access times, and facility needs.',
+    features: ['Site scope discussion', 'Agreed service frequency', 'Cleaning materials coordination'],
+    image: IMAGES.cleaning,
+    path: '/commercial-cleaning-contracts',
   },
   {
     icon: Building2,
@@ -44,6 +60,14 @@ const services = [
     features: ['Cleaning Equipment', 'Cleaning Chemicals', 'Consumables', 'Supply Coordination'],
     image: IMAGES.cleaningMaterials,
     path: '/cleaning-supplies',
+  },
+  {
+    icon: Wrench,
+    title: 'Facility Maintenance',
+    description: 'Routine facility support and maintenance coordination for businesses, institutions, and managed properties.',
+    features: ['Facility support planning', 'Site checks and issue reporting', 'Integrated cleaning and hygiene support'],
+    image: IMAGES.facilityMgmt,
+    path: '/facility-maintenance',
   },
 ];
 
@@ -69,8 +93,7 @@ export default function Services() {
               <span className="text-highlight-yellow">Cleaning</span>, & Hygiene Services
             </h1>
             <p className="mt-6 text-lg font-body text-white/70 leading-relaxed max-w-2xl">
-              We deliver hygiene, pest control, cleaning, and cleaning supply solutions to clients across the business, 
-              education, hospitality, healthcare, and residential sectors.
+              We deliver pest control, commercial and residential cleaning, workplace hygiene, cleaning supplies, contract cleaning, and facility support for clients across South Africa.
             </p>
           </motion.div>
         </div>
@@ -96,6 +119,10 @@ export default function Services() {
                       src={service.image}
                       alt={service.title}
                       className="w-full h-72 md:h-96 object-cover"
+                      loading="lazy"
+                      decoding="async"
+                      width="1200"
+                      height="800"
                     />
                     <div className="absolute top-4 left-4">
                       <div className="w-14 h-14 rounded-xl bg-accent/90 backdrop-blur-sm flex items-center justify-center shadow-lg">

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Bug, Sparkles, Droplets, ArrowRight } from 'lucide-react';
+import { Bug, Sparkles, Droplets, ArrowRight, Package } from 'lucide-react';
 import SectionHeading from '@/components/shared/SectionHeading';
 import ServiceCard from '@/components/shared/ServiceCard';
 import { Button } from '@/components/ui/button';
@@ -25,9 +25,16 @@ export default function ServicesPreview({ images }) {
     {
       icon: Sparkles,
       title: 'Commercial & Industrial Cleaning',
-      description: 'We are a leading provider of outsourced cleaning services for homes, offices and commercial building, specializing in both once-off cleaning services and long term cleaning contracts',
+      description: 'Cleaning support for homes, offices, commercial buildings and industrial sites, with once-off and recurring service enquiries.',
       image: images.cleaning,
-      path: '/cleaning-services',
+      path: '/commercial-cleaning',
+    },
+    {
+      icon: Package,
+      title: 'Cleaning Materials & Supplies',
+      description: 'Cleaning chemicals, equipment, consumables and hygiene supplies for workplaces and facility teams.',
+      image: images.cleaningMaterials,
+      path: '/cleaning-supplies',
     },
   ];
 
@@ -40,7 +47,7 @@ export default function ServicesPreview({ images }) {
           description="Our work is structured around the practical needs of facilities, institutions, businesses, and public sector teams across South Africa."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-8">
           {services.map((service, index) => (
             <ServiceCard key={service.title} {...service} index={index} />
           ))}

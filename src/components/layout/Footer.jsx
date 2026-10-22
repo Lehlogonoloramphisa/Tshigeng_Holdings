@@ -10,9 +10,12 @@ const quickLinks = [
 
 const serviceLinks = [
   { label: 'Pest Control', path: '/pest-control' },
-  { label: 'Cleaning Services', path: '/cleaning-services' },
+  { label: 'Commercial Cleaning', path: '/commercial-cleaning' },
+  { label: 'Residential Cleaning', path: '/residential-cleaning' },
+  { label: 'Cleaning Contracts', path: '/commercial-cleaning-contracts' },
   { label: 'Hygiene Services', path: '/hygiene-services' },
   { label: 'Cleaning Supplies', path: '/cleaning-supplies' },
+  { label: 'Facility Maintenance', path: '/facility-maintenance' },
 ];
 
 const legalLinks = [
@@ -56,7 +59,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-sm text-primary-foreground/70 font-body leading-relaxed">
-              Established in 2011, Tshigeng Holdings delivers facilities management, hygiene, pest control, commercial and industrial cleaning, and cleaning material supply across South Africa.
+              Established in 2011, Tshigeng Holdings provides pest control, commercial and residential cleaning, workplace hygiene, cleaning supplies, and facility support in Gauteng and across South Africa.
             </p>
           </div>
 
@@ -118,8 +121,8 @@ export default function Footer() {
               <li className="flex items-start gap-3 text-sm text-primary-foreground/70 font-body">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
                 <div>
-                  3 Saltus Street, Galloway Estate<br />
-                  Irene, Centurion, Pretoria
+                  3 Saltus Street, Galloway Estate, Irene<br />
+                  Centurion, Gauteng, South Africa
                 </div>
               </li>
             </ul>

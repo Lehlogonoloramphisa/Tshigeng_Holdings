@@ -42,7 +42,7 @@ export default function Navbar() {
             </a>
           </div>
           <span className="font-body text-xs tracking-wider opacity-80">
-            3 Saltus Street, Galloway Estate, Irene, Centurion
+            3 Saltus Street, Galloway Estate, Irene, Centurion, Gauteng
           </span>
         </div>
       </div>

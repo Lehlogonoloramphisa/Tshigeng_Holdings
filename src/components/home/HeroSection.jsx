@@ -7,11 +7,24 @@ import { Button } from '@/components/ui/button';
 const LOGO_URL = 'https://media.base44.com/images/public/6a0b89c12b62c237ea23ea47/d8d1d8c2a_tshigeng-holdings-logo.png';
 
 export default function HeroSection({ heroImage }) {
+  const desktopHeroImage = heroImage.replace(/w=\d+/, 'w=1600');
+  const mobileHeroImage = heroImage.replace(/w=\d+/, 'w=800');
+
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0">
-        <img src={heroImage} alt="Tshigeng Holdings corporate campus" className="w-full h-full object-cover" />
+        <img
+          src={desktopHeroImage}
+          srcSet={`${mobileHeroImage} 800w, ${desktopHeroImage} 1600w`}
+          sizes="100vw"
+          alt=""
+          role="presentation"
+          width="1600"
+          height="900"
+          decoding="async"
+          className="w-full h-full object-cover"
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-secondary/85 to-secondary/45" />
         <div className="absolute inset-0 bg-gradient-to-t from-secondary/60 via-transparent to-transparent" />
       </div>
@@ -48,7 +61,7 @@ export default function HeroSection({ heroImage }) {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="mt-6 text-base md:text-lg text-white/80 font-body leading-relaxed max-w-lg"
           >
-            Tshigeng Holdings is a leading provider of pest control, cleaning and hygiene services.
+            Tshigeng Holdings provides pest control, commercial and residential cleaning, workplace hygiene, and cleaning supplies for homes and facilities in Gauteng and across South Africa.
           </motion.p>
 
           <motion.div

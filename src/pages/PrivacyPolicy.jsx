@@ -71,7 +71,7 @@ export default function PrivacyPolicy() {
             <p>
               Email: <a href="mailto:tshigeng.buti@gmail.com">tshigeng.buti@gmail.com</a><br />
               Phone: <a href="tel:+27727006135">+27 72 700 6135</a><br />
-              Address: 3 Saltus Street, Galloway Estate, Irene, Centurion, Pretoria
+              Address: 3 Saltus Street, Galloway Estate, Irene, Centurion, Gauteng, South Africa
             </p>
 
             <h2>Cookies</h2>

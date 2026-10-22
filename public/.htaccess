@@ -1,9 +1,29 @@
+Options -MultiViews
+DirectoryIndex index.html
+
 <IfModule mod_rewrite.c>
-  DirectoryIndex index.html
   RewriteEngine On
   RewriteBase /
-  RewriteRule ^index\.html$ - [L]
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule . /index.html [L]
+
+  # Serve the HTTPS www host as the single canonical origin.
+  RewriteCond %{HTTPS} !=on [OR]
+  RewriteCond %{HTTP_HOST} !^www\.tshigengholdings\.co\.za$ [NC]
+  RewriteRule ^ https://www.tshigengholdings.co.za%{REQUEST_URI} [R=301,L,NE]
+
+  # Keep one clean URL for each generated page.
+  RewriteRule ^index\.html$ https://www.tshigengholdings.co.za/ [R=301,L,NE]
+  RewriteCond %{REQUEST_URI} .+/$
+  RewriteRule ^(.+)/$ https://www.tshigengholdings.co.za/$1 [R=301,L,NE]
+
+  # Keep real files and directories available, including generated route pages.
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Map clean URLs such as /pest-control to their generated HTML files.
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^(.+)$ $1.html [L]
+
+  ErrorDocument 404 /404.html
+  RewriteRule ^ - [R=404,L]
 </IfModule>

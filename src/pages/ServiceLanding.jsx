@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, CheckCircle2, HelpCircle, Search } from 'lucide-react';
+import { ArrowRight, CheckCircle2, HelpCircle, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import SectionHeading from '@/components/shared/SectionHeading';
 
@@ -83,18 +83,29 @@ export default function ServiceLanding({ page }) {
             className="rounded-lg border border-border bg-card p-8 shadow-xl shadow-primary/5"
           >
             <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-lg bg-accent text-accent-foreground">
-              <Search className="h-6 w-6" />
+              <Phone className="h-6 w-6" />
             </div>
             <h3 className="font-heading text-2xl font-bold text-card-foreground">
-              Search Terms This Page Supports
+              Plan the right support for your site
             </h3>
-            <ul className="mt-6 space-y-3">
-              {page.searchFocus.map((item) => (
-                <li key={item} className="font-body text-sm leading-relaxed text-muted-foreground">
-                  {item}
-                </li>
-              ))}
-            </ul>
+            <p className="mt-4 font-body text-sm leading-relaxed text-muted-foreground">
+              Tell us where the site is, what needs attention and how often you need support. We can discuss the scope and the next step for a quote.
+            </p>
+            <div className="mt-6 flex flex-col gap-3">
+              <Link to="/contact">
+                <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-body font-semibold">
+                  Request a Quote
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+              <a
+                href="tel:+27727006135"
+                className="inline-flex items-center justify-center gap-2 rounded-md border border-border px-4 py-3 font-body text-sm font-semibold text-foreground hover:bg-muted"
+              >
+                <Phone className="h-4 w-4" />
+                Call +27 72 700 6135
+              </a>
+            </div>
           </motion.div>
         </div>
       </section>

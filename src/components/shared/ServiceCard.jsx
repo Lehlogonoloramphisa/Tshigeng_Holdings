@@ -19,6 +19,10 @@ export default function ServiceCard({ icon: Icon, title, description, image, pat
               src={image}
               alt={title}
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              loading="lazy"
+              decoding="async"
+              width="600"
+              height="400"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 to-transparent" />
             <div className="absolute bottom-4 left-4">

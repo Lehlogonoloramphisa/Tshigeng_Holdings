@@ -1,39 +1,36 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { landingPageMeta, locationLandingPages, serviceLandingPages } from '@/data/seoLandingPages';
+import {
+  landingPageMeta,
+  locationLandingPages,
+  serviceLandingPages,
+} from '@/data/seoLandingPages';
 
-const SITE_URL = 'https://tshigengholdings.co.za';
-const SITE_NAME = 'Tshigeng Holdings';
-const DEFAULT_IMAGE = `${SITE_URL}/favicon.png`;
+export const SITE_URL = 'https://www.tshigengholdings.co.za';
+export const SITE_NAME = 'Tshigeng Holdings';
+export const BUSINESS_LOGO =
+  'https://media.base44.com/images/public/6a0b89c12b62c237ea23ea47/d8d1d8c2a_tshigeng-holdings-logo.png';
 
 const pageMeta = {
   '/': {
-    title: 'Tshigeng Holdings | Pest Control, Cleaning & Hygiene Services in South Africa',
+    title: 'Tshigeng Holdings | Cleaning & Pest Control in Centurion',
     description:
-      'Tshigeng Holdings provides pest control, hygiene services, commercial cleaning, residential cleaning, and cleaning material supply across South Africa.',
-    keywords:
-      'Tshigeng Holdings, pest control South Africa, pest control Centurion, cleaning services Pretoria, hygiene services South Africa, commercial cleaning, cleaning materials',
+      'Tshigeng Holdings provides pest control, commercial and residential cleaning, hygiene services and cleaning supplies in Centurion, Pretoria and across Gauteng.',
   },
   '/about': {
-    title: 'About Tshigeng Holdings | Facilities Services Since 2011',
+    title: 'About Tshigeng Holdings | Facilities Services in Gauteng',
     description:
-      'Learn about Tshigeng Holdings, a South African facilities services company established in 2011 with mission, vision, and core values focused on reliable service.',
-    keywords:
-      'about Tshigeng Holdings, facilities services South Africa, black empowered company, facility management company',
+      'Learn about Tshigeng Holdings, a South African facilities services company established in 2011, serving homes and organisations with cleaning, hygiene and pest control.',
   },
   '/services': {
     title: 'Pest Control, Cleaning & Hygiene Services | Tshigeng Holdings',
     description:
-      'Explore Tshigeng Holdings services including hygiene equipment, pest control, commercial cleaning, residential cleaning, and cleaning material supply.',
-    keywords:
-      'pest control services, hygiene services, commercial cleaning, residential cleaning, cleaning materials, facility services South Africa',
+      'Explore pest management, commercial and residential cleaning, washroom hygiene, cleaning supplies, contract cleaning and facility maintenance from Tshigeng Holdings.',
   },
   '/contact': {
-    title: 'Contact Tshigeng Holdings | Request a Facility Services Quote',
+    title: 'Contact Tshigeng Holdings | Request a Service Quote',
     description:
-      'Contact Tshigeng Holdings for pest control, hygiene, cleaning, and cleaning material enquiries across South Africa.',
-    keywords:
-      'contact Tshigeng Holdings, facility services quote, pest control quote, cleaning services quote, hygiene services quote',
+      'Contact Tshigeng Holdings for cleaning, pest control, hygiene, supplies or facility maintenance. Call +27 72 700 6135 or request a quote online.',
   },
   '/privacy-policy': {
     title: 'Privacy Policy | Tshigeng Holdings',
@@ -58,28 +55,31 @@ const pageMeta = {
   ...landingPageMeta,
 };
 
+const businessId = `${SITE_URL}/#business`;
+const websiteId = `${SITE_URL}/#website`;
+
 const businessSchema = {
-  '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
+  '@id': businessId,
   name: SITE_NAME,
   legalName: 'Tshigeng Holdings CC',
-  url: SITE_URL,
-  logo: DEFAULT_IMAGE,
-  image: DEFAULT_IMAGE,
+  url: `${SITE_URL}/`,
+  logo: BUSINESS_LOGO,
+  image: BUSINESS_LOGO,
   telephone: '+27727006135',
   email: 'tshigeng.buti@gmail.com',
   foundingDate: '2011',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '3 Saltus Street, Galloway Estate',
-    addressLocality: 'Irene, Centurion',
+    streetAddress: '3 Saltus Street, Galloway Estate, Irene',
+    addressLocality: 'Centurion',
     addressRegion: 'Gauteng',
     addressCountry: 'ZA',
   },
-  areaServed: {
-    '@type': 'Country',
-    name: 'South Africa',
-  },
+  areaServed: [
+    { '@type': 'AdministrativeArea', name: 'Gauteng' },
+    { '@type': 'Country', name: 'South Africa' },
+  ],
   openingHoursSpecification: [
     {
       '@type': 'OpeningHoursSpecification',
@@ -88,102 +88,112 @@ const businessSchema = {
       closes: '17:00',
     },
   ],
+  contactPoint: {
+    '@type': 'ContactPoint',
+    telephone: '+27727006135',
+    email: 'tshigeng.buti@gmail.com',
+    contactType: 'customer service',
+    areaServed: 'ZA',
+    availableLanguage: 'English',
+  },
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
-    name: 'Facility Services',
+    name: 'Cleaning, hygiene and facility services',
     itemListElement: [
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Pest Control' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Hygiene Services' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Commercial Cleaning' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Residential Cleaning' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Cleaning Materials' } },
-    ],
+      'Pest control',
+      'Commercial cleaning',
+      'Residential cleaning',
+      'Washroom hygiene and sanitation',
+      'Cleaning supplies and materials',
+      'Commercial cleaning contracts',
+      'Facility maintenance',
+    ].map((name) => ({
+      '@type': 'Offer',
+      itemOffered: { '@type': 'Service', name },
+    })),
   },
 };
 
 const websiteSchema = {
-  '@context': 'https://schema.org',
   '@type': 'WebSite',
+  '@id': websiteId,
   name: SITE_NAME,
-  url: SITE_URL,
-  publisher: {
-    '@type': 'Organization',
-    name: SITE_NAME,
-    logo: {
-      '@type': 'ImageObject',
-      url: DEFAULT_IMAGE,
-    },
-  },
+  url: `${SITE_URL}/`,
+  publisher: { '@id': businessId },
+  inLanguage: 'en-ZA',
 };
 
-function buildPageSchema(path, meta, canonical) {
-  const servicePage = serviceLandingPages[path];
-  const locationPage = locationLandingPages[path];
-  const page = servicePage || locationPage;
+export function normalizePath(pathname) {
+  if (!pathname || pathname === '/') return '/';
+  return pathname.replace(/\/+$/, '');
+}
 
-  const schemas = [
+export function getSeoMetadata(pathname) {
+  const path = normalizePath(pathname);
+  const meta = pageMeta[path] || {
+    title: `Page Not Found | ${SITE_NAME}`,
+    description: 'The requested Tshigeng Holdings page could not be found.',
+    robots: 'noindex, follow',
+  };
+
+  return {
+    ...meta,
+    path,
+    canonical: path === '/' ? `${SITE_URL}/` : `${SITE_URL}${path}`,
+    robots: meta.robots || 'index, follow',
+    image: meta.image || BUSINESS_LOGO,
+  };
+}
+
+export function getStructuredData(pathname) {
+  const meta = getSeoMetadata(pathname);
+  const servicePage = serviceLandingPages[meta.path];
+  const locationPage = locationLandingPages[meta.path];
+  const page = servicePage || locationPage;
+  const pageId = `${meta.canonical}#webpage`;
+
+  const graph = [
+    businessSchema,
+    websiteSchema,
     {
-      '@context': 'https://schema.org',
       '@type': 'WebPage',
+      '@id': pageId,
       name: meta.title,
       description: meta.description,
-      url: canonical,
-      isPartOf: {
-        '@type': 'WebSite',
-        name: SITE_NAME,
-        url: SITE_URL,
+      url: meta.canonical,
+      isPartOf: { '@id': websiteId },
+      about: { '@id': businessId },
+      inLanguage: 'en-ZA',
+      primaryImageOfPage: {
+        '@type': 'ImageObject',
+        url: meta.image,
       },
-      about: page?.searchFocus || page?.services || undefined,
-      keywords: meta.keywords,
     },
   ];
 
   if (page) {
-    schemas.push({
-      '@context': 'https://schema.org',
+    graph.push({
       '@type': 'Service',
+      '@id': `${meta.canonical}#service`,
       name: page.title,
       description: page.description,
-      provider: {
-        '@type': 'LocalBusiness',
-        name: SITE_NAME,
-        url: SITE_URL,
-        telephone: '+27727006135',
-      },
-      areaServed: locationPage
-        ? {
-            '@type': 'Place',
-            name: locationPage.location,
-          }
-        : {
-            '@type': 'Country',
-            name: 'South Africa',
-          },
       serviceType: page.service || page.title,
+      provider: { '@id': businessId },
+      areaServed: locationPage
+        ? [
+            { '@type': 'Place', name: locationPage.location },
+            ...(locationPage.nearbyAreas || []).map((name) => ({ '@type': 'Place', name })),
+            { '@type': 'AdministrativeArea', name: 'Gauteng' },
+          ]
+        : [
+            { '@type': 'AdministrativeArea', name: 'Gauteng' },
+            { '@type': 'Country', name: 'South Africa' },
+          ],
+      mainEntityOfPage: { '@id': pageId },
     });
-
-    if (page.faqs?.length) {
-      schemas.push({
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: page.faqs.map((faq) => ({
-          '@type': 'Question',
-          name: faq.question,
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: faq.answer,
-          },
-        })),
-      });
-    }
   }
 
-  return schemas;
-}
-
-function normalizePath(pathname) {
-  if (!pathname || pathname === '/') return '/';
-  return pathname.replace(/\/+$/, '');
+  return { '@context': 'https://schema.org', '@graph': graph };
 }
 
 function setMeta(attribute, key, content) {
@@ -215,38 +225,25 @@ export default function Seo() {
   const location = useLocation();
 
   useEffect(() => {
-    const path = normalizePath(location.pathname);
-    const meta = pageMeta[path] || {
-      title: `Page Not Found | ${SITE_NAME}`,
-      description: 'The requested Tshigeng Holdings page could not be found.',
-      robots: 'noindex, follow',
-    };
-    const canonical = `${SITE_URL}${path === '/' ? '/' : path}`;
-    const robots = meta.robots || 'index, follow';
-
+    const meta = getSeoMetadata(location.pathname);
     document.title = meta.title;
+
     setMeta('name', 'description', meta.description);
-    setMeta('name', 'keywords', meta.keywords);
-    setMeta('name', 'robots', robots);
+    setMeta('name', 'robots', meta.robots);
     setMeta('name', 'author', SITE_NAME);
     setMeta('name', 'theme-color', '#2a945d');
-    setMeta('name', 'geo.region', 'ZA-GP');
-    setMeta('name', 'geo.placename', 'Irene, Centurion');
-
     setMeta('property', 'og:title', meta.title);
     setMeta('property', 'og:description', meta.description);
     setMeta('property', 'og:type', 'website');
-    setMeta('property', 'og:url', canonical);
+    setMeta('property', 'og:url', meta.canonical);
     setMeta('property', 'og:site_name', SITE_NAME);
     setMeta('property', 'og:locale', 'en_ZA');
-    setMeta('property', 'og:image', DEFAULT_IMAGE);
-
+    setMeta('property', 'og:image', meta.image);
     setMeta('name', 'twitter:card', 'summary_large_image');
     setMeta('name', 'twitter:title', meta.title);
     setMeta('name', 'twitter:description', meta.description);
-    setMeta('name', 'twitter:image', DEFAULT_IMAGE);
-
-    setLink('canonical', canonical);
+    setMeta('name', 'twitter:image', meta.image);
+    setLink('canonical', meta.canonical);
 
     let schemaScript = document.getElementById('structured-data');
     if (!schemaScript) {
@@ -255,11 +252,7 @@ export default function Seo() {
       schemaScript.type = 'application/ld+json';
       document.head.appendChild(schemaScript);
     }
-    schemaScript.textContent = JSON.stringify([
-      businessSchema,
-      websiteSchema,
-      ...buildPageSchema(path, meta, canonical),
-    ]);
+    schemaScript.textContent = JSON.stringify(getStructuredData(location.pathname));
   }, [location.pathname]);
 
   return null;

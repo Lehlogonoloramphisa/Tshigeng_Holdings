@@ -12,7 +12,7 @@ const commitmentBoxes = [
   {
     icon: Building2,
     title: 'Businesses',
-    description:'By combining pro-active hygiene solutions, with Integrated Pest Management (IPM), we protact your business, health, and reputation while minimizing environmental impact',
+    description: 'Cleaning, hygiene and pest management support can be planned around the needs and operating schedule of each business site.',
   },
   {
     icon: BadgeCheck,
@@ -27,9 +27,7 @@ export default function WhyUsSection() {
         <SectionHeading
           eyebrow="Why Tshigeng"
           title="Our Service Commitment"
-          description="We are a leading provider of pest control, cleaning and hygiene services.
-          With a commitment to quality, safety, and customer satisfaction, the company helps create clean, 
-          healthy, and pest-free environments tailored to the unique needs of every customer"
+          description="Tshigeng Holdings provides pest control, cleaning, hygiene and facility services for homes, businesses and institutions. Service scopes are discussed around each site's requirements and schedule."
         />
 
         <motion.div

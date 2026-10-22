@@ -35,7 +35,7 @@ export default function About() {
               <span className="text-highlight-yellow">Facility</span> Solutions
             </h1>
             <p className="mt-6 text-lg font-body text-white/70 leading-relaxed max-w-2xl">
-              Tshigeng Holdings is a black empowered company providing pest control, hygiene, cleaning, and cleaning chemical solutions across South Africa.
+              Tshigeng Holdings is a South African facilities services company established in 2011, serving businesses, institutions and homes in Gauteng and across the country.
             </p>
           </motion.div>
         </div>
@@ -53,8 +53,12 @@ export default function About() {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-primary/10">
                 <img
                   src={TEAM_IMAGE}
-                  alt="Modern office interior"
+                  alt="Clean, well maintained office interior"
                   className="w-full h-auto object-cover"
+                  loading="lazy"
+                  decoding="async"
+                  width="1200"
+                  height="800"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-secondary/25 to-transparent" />
               </div>
@@ -74,17 +78,13 @@ export default function About() {
               </h2>
               <div className="space-y-4 font-body text-muted-foreground leading-relaxed">
                 <p>
-                  Tshigeng Holdings is black empowered company started in 2011 registration number CK NO: 2011/056260/23. The
-                  company has been  providing services for facilities management services such as, pest control,  hygiene, commercial and
-                  industrial cleaning and provision of cleaning chemicals for the past decade.
+                  Tshigeng Holdings CC (registration number 2011/056260/23) was established in 2011. The company provides pest control, workplace hygiene, commercial and industrial cleaning, cleaning supplies, and facility support.
                 </p>
                 <p>
-                  Tshigeng Holdings enjoys national foot print with diversified portfolio of products and services
+                  The team supports service enquiries in Centurion, Pretoria and surrounding Gauteng areas, as well as work across South Africa.
                 </p>
                 <p>
-                  Tshigeng Holdings has been a service provider of choice in the provision of  facilities management. Clients enjoy our
-                  services, e.g, commercial, industrial, hotel, educational, hospitality and healthcare sectors. We provide services where
-                  there is a need, across the country
+                  Services can be scoped for offices, industrial sites, hotels, schools, healthcare environments, hospitality venues and residential properties. Each enquiry can outline the location, required work and preferred schedule.
                 </p>
               </div>
             </motion.div>

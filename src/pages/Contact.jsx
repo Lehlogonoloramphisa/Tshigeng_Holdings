@@ -24,8 +24,8 @@ const contactInfo = [
   {
     icon: MapPin,
     title: 'Visit Us',
-    details: ['3 Saltus Street, Galloway Estate', 'Irene, Centurion, Pretoria'],
-    action: 'https://www.google.com/maps?q=3+Saltus+Street+Galloway+Estate+Irene+Centurion',
+    details: ['3 Saltus Street, Galloway Estate, Irene', 'Centurion, Gauteng, South Africa'],
+    action: 'https://www.google.com/maps?q=3+Saltus+Street+Galloway+Estate+Irene+Centurion+Gauteng+South+Africa',
   },
   {
     icon: Clock,
@@ -249,7 +249,10 @@ export default function Contact() {
                         <SelectContent>
                           <SelectItem value="hygiene">Hygiene Services</SelectItem>
                           <SelectItem value="pest-control">Pest Control</SelectItem>
-                          <SelectItem value="commercial-industrial-cleaning">Commercial & Industrial Cleaning</SelectItem>
+                          <SelectItem value="commercial-cleaning">Commercial Cleaning</SelectItem>
+                          <SelectItem value="residential-cleaning">Residential Cleaning</SelectItem>
+                          <SelectItem value="cleaning-contract">Commercial Cleaning Contract</SelectItem>
+                          <SelectItem value="facility-maintenance">Facility Maintenance</SelectItem>
                           <SelectItem value="cleaning-materials">Cleaning Materials</SelectItem>
                           <SelectItem value="multiple">Multiple Services</SelectItem>
                         </SelectContent>
@@ -302,8 +305,8 @@ export default function Contact() {
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-primary/10">
                 <iframe
-                  title="Map showing Tshigeng Holdings location in Irene, Centurion, South Africa"
-                  src="https://www.google.com/maps?q=3%20Saltus%20Street%2C%20Galloway%20Estate%2C%20Irene%2C%20Centurion%2C%20Pretoria%2C%20South%20Africa&output=embed"
+                  title="Map showing Tshigeng Holdings at 3 Saltus Street, Irene, Centurion, Gauteng"
+                  src="https://www.google.com/maps?q=3%20Saltus%20Street%2C%20Galloway%20Estate%2C%20Irene%2C%20Centurion%2C%20Gauteng%2C%20South%20Africa&output=embed"
                   className="w-full h-72 md:h-96 border-0"
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
@@ -315,13 +318,13 @@ export default function Contact() {
                     Our Location
                   </h3>
                   <p className="font-body text-sm text-white/80">
-                    3 Saltus Street, Galloway Estate, Irene, Centurion
+                    3 Saltus Street, Galloway Estate, Irene, Centurion, Gauteng, South Africa
                   </p>
                 </div>
               </div>
 
               <a
-                href="https://www.google.com/maps?q=3+Saltus+Street+Galloway+Estate+Irene+Centurion"
+                href="https://www.google.com/maps?q=3+Saltus+Street+Galloway+Estate+Irene+Centurion+Gauteng+South+Africa"
                 target="_blank"
                 rel="noopener noreferrer"
               >
