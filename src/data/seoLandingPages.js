@@ -7,6 +7,27 @@ export const serviceLandingPages = {
     highlight: 'Pest Control',
     image: serviceImages.pestControl,
     imageAlt: 'Pest control professional treating an indoor space',
+    imageGallery: {
+      eyebrow: 'Pest Control',
+      title: 'Pest control in different settings',
+      images: [
+        {
+          src: serviceImages.pestControlExterior,
+          alt: 'Pest control technician spraying treatment around the outside of a building',
+          caption: 'Exterior pest treatment',
+        },
+        {
+          src: serviceImages.pestControlTechnician,
+          alt: 'Technician applying pest control treatment inside a commercial property',
+          caption: 'Indoor pest treatment',
+        },
+        {
+          src: serviceImages.pestControlWarehouse,
+          alt: 'Technician using pest control equipment in an industrial facility',
+          caption: 'Industrial facility treatment',
+        },
+      ],
+    },
     description:
       'Commercial and industrial pest control for businesses and facilities. Share your site location and pest concern so Tshigeng Holdings can discuss the appropriate service scope.',
     introTitle: 'Commercial and industrial pest control',
@@ -104,8 +125,8 @@ export const serviceLandingPages = {
     eyebrow: 'Hygiene Service',
     title: 'Hygiene and Sanitation Services',
     highlight: 'Hygiene',
-    image: serviceImages.hygieneWashroom,
-    imageAlt: 'Washroom sinks with wall-mounted hygiene dispensers',
+    image: serviceImages.cleaningDesk,
+    imageAlt: 'Cleaner wiping a surface in a shared office workspace',
     description:
       'Hygiene equipment sales, installation, maintenance, and refill services for restrooms and shared facilities in Centurion, Pretoria, and Gauteng.',
     introTitle: 'Washroom hygiene and workplace care',
@@ -160,8 +181,8 @@ export const serviceLandingPages = {
         ],
         closing:
           'From offices and commercial buildings to high-traffic facilities, we help you maintain well-stocked hygiene stations for employees, visitors, and customers.',
-        image: serviceImages.hygieneWashroom,
-        imageAlt: 'Shared washroom with sinks and wall-mounted dispensers',
+        image: serviceImages.liquidSoapRefills,
+        imageAlt: 'A range of liquid cleaning and hygiene products for shared facilities',
       },
     ],
     faqs: [
@@ -200,6 +221,30 @@ export const serviceLandingPages = {
     highlight: 'Supplies',
     image: serviceImages.cleaningSupplies,
     imageAlt: 'Cleaning tools, gloves, and spray bottles',
+    imageGallery: {
+      eyebrow: 'Cleaning Materials',
+      title: 'Cleaning products and equipment',
+      images: [
+        {
+          src: serviceImages.cleaningChemicals,
+          alt: 'Containers of cleaning chemicals arranged for supply',
+          caption: 'Cleaning chemicals',
+          fit: 'contain',
+        },
+        {
+          src: serviceImages.cleaningMop,
+          alt: 'Mop used for floor cleaning',
+          caption: 'Floor cleaning tools',
+          fit: 'contain',
+        },
+        {
+          src: serviceImages.cleaningGloves,
+          alt: 'Pair of yellow rubber gloves used for cleaning',
+          caption: 'Cleaning gloves',
+          fit: 'contain',
+        },
+      ],
+    },
     description:
       'Cleaning materials and supplies for homes, offices, commercial premises, and other facilities. Ask us to confirm availability for your product requirements.',
     introTitle: 'Cleaning materials for facilities that need dependable supply',

@@ -85,6 +85,38 @@ function ContentSections({ sections = [] }) {
   });
 }
 
+function ServiceImageGallery({ gallery }) {
+  if (!gallery?.images?.length) return null;
+
+  return (
+    <section className="bg-muted/40 py-16 md:py-20" aria-label={gallery.title}>
+      <div className="mx-auto max-w-7xl px-6">
+        <SectionHeading eyebrow={gallery.eyebrow} title={gallery.title} />
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {gallery.images.map((image) => (
+            <figure key={image.src} className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
+              <div className={`aspect-[4/3] ${image.fit === 'contain' ? 'bg-white p-6' : ''}`}>
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className={`h-full w-full ${image.fit === 'contain' ? 'object-contain' : 'object-cover'}`}
+                  loading="lazy"
+                  decoding="async"
+                  width="900"
+                  height="675"
+                />
+              </div>
+              <figcaption className="px-5 py-4 font-body text-sm font-medium text-card-foreground">
+                {image.caption}
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function ServiceLanding({ page }) {
   return (
     <div>
@@ -202,6 +234,7 @@ export default function ServiceLanding({ page }) {
       </section>
 
       <ContentSections sections={page.contentSections} />
+      <ServiceImageGallery gallery={page.imageGallery} />
 
       <section className="bg-muted/50 py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-6">
