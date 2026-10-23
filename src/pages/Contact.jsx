@@ -36,7 +36,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: 'Service Enquiries',
-    details: ['Centurion, Pretoria, and Gauteng', 'Ask us about availability elsewhere in South Africa'],
+    details: ['Gauteng and North West', 'Ask us about availability elsewhere in South Africa'],
   },
 ];
 
@@ -179,7 +179,7 @@ export default function Contact() {
                         <Input
                           id="name"
                           autoComplete="name"
-                          placeholder="John Doe"
+                          placeholder=" "
                           value={formData.name}
                           onChange={(e) => handleChange('name', e.target.value)}
                           className="font-body"
@@ -194,7 +194,7 @@ export default function Contact() {
                           id="email"
                           type="email"
                           autoComplete="email"
-                          placeholder="john@company.co.za"
+                          placeholder=" "
                           value={formData.email}
                           onChange={(e) => handleChange('email', e.target.value)}
                           className="font-body"
@@ -212,7 +212,7 @@ export default function Contact() {
                           id="phone"
                           type="tel"
                           autoComplete="tel"
-                          placeholder="+27 (0XX) XXX XXXX"
+                          placeholder=" "
                           value={formData.phone}
                           onChange={(e) => handleChange('phone', e.target.value)}
                           className="font-body"
@@ -225,7 +225,7 @@ export default function Contact() {
                         <Input
                           id="company"
                           autoComplete="organization"
-                          placeholder="Your company"
+                          placeholder=""
                           value={formData.company}
                           onChange={(e) => handleChange('company', e.target.value)}
                           className="font-body"
@@ -270,7 +270,7 @@ export default function Contact() {
                       type="submit"
                       className="w-full bg-accent text-accent-foreground hover:bg-accent/90 font-body font-semibold py-6 text-base shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30 transition-all duration-300"
                     >
-                      Open Email Draft
+                      Send
                       <Send className="w-5 h-5 ml-2" />
                     </Button>
                   </form>
