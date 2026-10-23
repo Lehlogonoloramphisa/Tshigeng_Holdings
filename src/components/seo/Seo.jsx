@@ -5,6 +5,7 @@ import {
   locationLandingPages,
   serviceLandingPages,
 } from '@/data/seoLandingPages';
+import { serviceImages } from '@/data/serviceImages';
 
 export const SITE_URL = 'https://www.tshigengholdings.co.za';
 export const SITE_NAME = 'Tshigeng Holdings';
@@ -14,23 +15,26 @@ export const BUSINESS_LOGO =
 const pageMeta = {
   '/': {
     title: 'Tshigeng Holdings | Cleaning & Pest Control in Centurion',
+    image: serviceImages.cleaningDesk,
     description:
       'Tshigeng Holdings provides commercial cleaning, hygiene services, pest control, and cleaning supplies in Centurion, Pretoria, and Gauteng.',
   },
   '/about': {
-    title: 'About Tshigeng Holdings | Facilities Services in Gauteng',
+    title: 'About Tshigeng Holdings | Cleaning & Hygiene in Gauteng',
+    image: serviceImages.cleaningDesk,
     description:
-      'Learn about Tshigeng Holdings, a South African facilities services company established in 2011, serving homes and organisations with cleaning, hygiene and pest control.',
+      'Tshigeng Holdings, established in 2011 and based in Irene, Centurion, offers commercial cleaning, hygiene services, cleaning materials, and commercial and industrial pest control.',
   },
   '/services': {
     title: 'Commercial Cleaning, Hygiene & Pest Control | Tshigeng Holdings',
+    image: serviceImages.commercialCleaning,
     description:
       'Explore commercial cleaning, deep cleaning, hygiene equipment and refills, pest control, and cleaning supplies from Tshigeng Holdings.',
   },
   '/contact': {
     title: 'Contact Tshigeng Holdings | Request a Service Quote',
     description:
-      'Contact Tshigeng Holdings for commercial cleaning, pest control, hygiene equipment, refills, or cleaning supplies. Call +27 72 700 6135 or request a quote online.',
+      'Contact Tshigeng Holdings about commercial cleaning, pest control, hygiene equipment and refills, or cleaning materials. Call or email to discuss your enquiry.',
   },
   '/privacy-policy': {
     title: 'Privacy Policy | Tshigeng Holdings',
@@ -79,14 +83,6 @@ const businessSchema = {
   areaServed: [
     { '@type': 'AdministrativeArea', name: 'Gauteng' },
     { '@type': 'Country', name: 'South Africa' },
-  ],
-  openingHoursSpecification: [
-    {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-      opens: '08:00',
-      closes: '17:00',
-    },
   ],
   contactPoint: {
     '@type': 'ContactPoint',
@@ -140,7 +136,7 @@ export function getSeoMetadata(pathname) {
     path,
     canonical: path === '/' ? `${SITE_URL}/` : `${SITE_URL}${path}`,
     robots: meta.robots || 'index, follow',
-    image: meta.image || BUSINESS_LOGO,
+    image: new URL(meta.image || BUSINESS_LOGO, SITE_URL).toString(),
   };
 }
 

@@ -26,6 +26,15 @@ export default function Navbar() {
     setIsOpen(false);
   }, [location]);
 
+  useEffect(() => {
+    if (!isOpen) return undefined;
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') setIsOpen(false);
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen]);
+
   return (
     <>
       {/* Top bar */}
@@ -49,6 +58,7 @@ export default function Navbar() {
 
       {/* Main nav */}
       <nav
+        aria-label="Main navigation"
         className={`sticky top-0 z-50 transition-all duration-500 ${
           scrolled
             ? 'bg-background/95 backdrop-blur-xl shadow-lg shadow-primary/5 border-b border-border'
@@ -84,16 +94,19 @@ export default function Navbar() {
 
           {/* CTA + Mobile toggle */}
           <div className="flex items-center gap-3">
-            <Link to="/contact" className="hidden lg:block">
-              <Button className="bg-accent text-accent-foreground hover:bg-accent/90 font-body font-semibold shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30 transition-all duration-300">
+            <Button asChild className="hidden bg-accent font-body font-semibold text-accent-foreground shadow-lg shadow-accent/20 transition-all duration-300 hover:bg-accent/90 hover:shadow-xl hover:shadow-accent/30 lg:inline-flex">
+              <Link to="/contact">
                 Get a Quote
                 <ChevronRight className="w-4 h-4 ml-1" />
-              </Button>
-            </Link>
+              </Link>
+            </Button>
             <button
+              type="button"
               onClick={() => setIsOpen(!isOpen)}
               className="lg:hidden p-2 rounded-lg hover:bg-muted transition-colors"
-              aria-label="Toggle menu"
+              aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
+              aria-expanded={isOpen}
+              aria-controls={isOpen ? 'mobile-navigation' : undefined}
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -104,7 +117,9 @@ export default function Navbar() {
       {/* Mobile menu */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
+          <motion.nav
+            id="mobile-navigation"
+            aria-label="Mobile navigation"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
@@ -120,6 +135,7 @@ export default function Navbar() {
                 >
                   <Link
                     to={link.path}
+                    aria-current={location.pathname === link.path ? 'page' : undefined}
                     className={`block px-4 py-3 rounded-lg text-base font-medium font-body transition-all ${
                       location.pathname === link.path
                         ? 'text-primary bg-primary/5'
@@ -131,12 +147,12 @@ export default function Navbar() {
                 </motion.div>
               ))}
               <div className="pt-3">
-                <Link to="/contact">
-                  <Button className="w-full bg-accent text-accent-foreground hover:bg-accent/90 font-body font-semibold">
+                <Button asChild className="w-full bg-accent font-body font-semibold text-accent-foreground hover:bg-accent/90">
+                  <Link to="/contact">
                     Get a Quote
                     <ChevronRight className="w-4 h-4 ml-1" />
-                  </Button>
-                </Link>
+                  </Link>
+                </Button>
               </div>
               <div className="pt-3 space-y-2 text-sm text-muted-foreground">
                 <a href="tel:+27727006135" className="flex items-center gap-2">
@@ -147,7 +163,7 @@ export default function Navbar() {
                 </a>
               </div>
             </div>
-          </motion.div>
+          </motion.nav>
         )}
       </AnimatePresence>
     </>

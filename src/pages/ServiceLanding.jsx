@@ -25,7 +25,7 @@ function ContentSections({ sections = [] }) {
             </div>
           )}
           <div className={imageOnLeft ? 'lg:order-2' : 'lg:order-1'}>
-            <span className="mb-3 block font-body text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+            <span className="mb-3 block font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary">
               {section.eyebrow || 'Our Services'}
             </span>
             <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
@@ -71,12 +71,12 @@ function ContentSections({ sections = [] }) {
               </p>
             )}
             {section.callToAction && (
-              <Link to="/contact" className="mt-7 inline-flex">
-                <Button className="bg-primary font-body font-semibold text-primary-foreground hover:bg-primary/90">
+              <Button asChild className="mt-7 bg-primary font-body font-semibold text-primary-foreground hover:bg-primary/90">
+                <Link to="/contact">
                   Request a Quote
                   <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
+                </Link>
+              </Button>
             )}
           </div>
         </div>
@@ -88,43 +88,54 @@ function ContentSections({ sections = [] }) {
 export default function ServiceLanding({ page }) {
   return (
     <div>
-      <section className="relative overflow-hidden bg-brand-gradient py-20 md:py-32">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute right-10 top-10 h-80 w-80 rounded-full bg-accent blur-3xl" />
-        </div>
-        <div className="relative mx-auto max-w-7xl px-6">
+      <section className="relative overflow-hidden bg-primary text-primary-foreground">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,hsl(var(--secondary)/0.7),transparent_55%)]" />
+        <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-6 py-16 md:py-20 lg:min-h-[570px] lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="max-w-3xl"
+            className="max-w-2xl"
           >
-            <span className="mb-4 block font-body text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+            <span className="mb-4 block font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary">
               {page.eyebrow}
             </span>
-            <h1 className="font-heading text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
+            <h1 className="font-heading text-4xl font-bold leading-[1.08] text-white md:text-5xl lg:text-6xl">
               {page.title}
             </h1>
-            <p className="mt-6 max-w-2xl font-body text-lg leading-relaxed text-white/75">
+            <p className="mt-6 max-w-xl font-body text-lg leading-relaxed text-white/80">
               {page.description}
             </p>
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <Link to="/contact">
-                <Button className="bg-accent px-8 py-6 font-body font-semibold text-accent-foreground hover:bg-accent/90">
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+              <Button asChild className="bg-accent px-7 py-6 font-body font-semibold text-accent-foreground hover:bg-accent/90">
+                <Link to="/contact">
                   Request a Quote
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-              <a href="tel:+27727006135">
-                <Button
-                  variant="outline"
-                  className="border-white/30 px-8 py-6 font-body font-semibold text-white hover:bg-white/10 hover:text-white"
-                >
-                  Call +27 72 700 6135
-                </Button>
+                </Link>
+              </Button>
+              <a href="tel:+27727006135" className="inline-flex items-center justify-center rounded-md border border-white/30 px-6 py-3 font-body text-sm font-semibold text-white transition-colors hover:bg-white/10">
+                Call +27 72 700 6135
               </a>
             </div>
           </motion.div>
+          <motion.figure
+            initial={{ opacity: 0, scale: 0.98 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.12 }}
+            className="relative mx-auto w-full max-w-2xl overflow-hidden rounded-3xl border border-white/15 bg-white/5 p-2 shadow-2xl shadow-black/20"
+          >
+            <img
+              src={page.image}
+              alt={page.imageAlt}
+              className="aspect-[4/3] w-full rounded-[1.25rem] object-cover"
+              width="1200"
+              height="900"
+              decoding="async"
+            />
+            <figcaption className="absolute bottom-5 left-5 rounded-full border border-white/20 bg-primary/85 px-4 py-2 font-body text-xs font-medium tracking-wide text-white backdrop-blur-sm">
+              {page.highlight} · Tshigeng Holdings
+            </figcaption>
+          </motion.figure>
         </div>
       </section>
 
@@ -136,7 +147,7 @@ export default function ServiceLanding({ page }) {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <span className="mb-3 block font-body text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+            <span className="mb-3 block font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary">
               What We Cover
             </span>
             <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
@@ -172,12 +183,12 @@ export default function ServiceLanding({ page }) {
               Tell us where the site is, what needs attention and how often you need support. We can discuss the scope and the next step for a quote.
             </p>
             <div className="mt-6 flex flex-col gap-3">
-              <Link to="/contact">
-                <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-body font-semibold">
+              <Button asChild className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-body font-semibold">
+                <Link to="/contact">
                   Request a Quote
                   <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
+                </Link>
+              </Button>
               <a
                 href="tel:+27727006135"
                 className="inline-flex items-center justify-center gap-2 rounded-md border border-border px-4 py-3 font-body text-sm font-semibold text-foreground hover:bg-muted"
@@ -192,17 +203,23 @@ export default function ServiceLanding({ page }) {
 
       <ContentSections sections={page.contentSections} />
 
-      <section className="bg-muted/50 py-20 md:py-28">
+      <section className="bg-muted/50 py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-6">
           <SectionHeading
-            eyebrow="Industries"
-            title={`Who Uses Our ${page.highlight} Support`}
-            description="We shape each service around the facility type, level of use, hygiene risk, and operational schedule."
+            eyebrow="Plan an Enquiry"
+            title="Help us understand what you need"
+            description="A few details help the team review your request and confirm the next step."
           />
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {page.industries.map((industry) => (
-              <div key={industry} className="rounded-lg border border-border bg-card p-5">
-                <h3 className="font-heading text-lg font-bold text-card-foreground">{industry}</h3>
+          <div className="grid gap-5 md:grid-cols-3">
+            {[
+              { title: 'Location & premises', description: 'Include the site address or area and the type of premises.' },
+              { title: 'Service requirements', description: 'Describe the service, areas, equipment, or materials you need.' },
+              { title: 'Preferred timing', description: 'Share when you would like the work or service to take place.' },
+            ].map((item, index) => (
+              <div key={item.title} className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+                <span className="mb-5 flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-sm font-semibold text-white">0{index + 1}</span>
+                <h3 className="font-heading text-xl font-bold text-card-foreground">{item.title}</h3>
+                <p className="mt-3 font-body text-sm leading-relaxed text-muted-foreground">{item.description}</p>
               </div>
             ))}
           </div>
@@ -227,7 +244,7 @@ export default function ServiceLanding({ page }) {
           </div>
 
           <div className="mt-12 rounded-lg bg-brand-gradient p-8 text-white">
-            <h3 className="font-heading text-2xl font-bold">Related Searches</h3>
+            <h3 className="font-heading text-2xl font-bold">Explore related services</h3>
             <div className="mt-5 flex flex-wrap gap-3">
               {page.relatedLinks.map((link) => (
                 <Link

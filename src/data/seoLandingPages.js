@@ -5,45 +5,32 @@ export const serviceLandingPages = {
     eyebrow: 'Pest Control Service',
     title: 'Pest Control Services',
     highlight: 'Pest Control',
+    image: serviceImages.pestControl,
+    imageAlt: 'Pest control professional treating an indoor space',
     description:
-      'Commercial and industrial pest control for businesses, offices, restaurants, warehouses, schools, factories, and managed facilities across Gauteng and South Africa.',
-    introTitle: 'Professional pest management for safer spaces',
+      'Commercial and industrial pest control for businesses and facilities. Share your site location and pest concern so Tshigeng Holdings can discuss the appropriate service scope.',
+    introTitle: 'Commercial and industrial pest control',
     intro:
-      'Tshigeng Holdings provides commercial and industrial pest control, with practical pest inspections, management plans, and ongoing contracts shaped around site risks, hygiene needs, and the type of activity taking place in each facility.',
+      'Tshigeng Holdings provides commercial and industrial pest control. The suitable scope depends on the premises and the issue being reported. Contact us with the site location, type of facility, and pest concern so the team can confirm whether it can assist.',
     searchFocus: [
-      'Residential pest control',
       'Commercial pest control',
       'Industrial pest control',
-      'Pest inspection services',
-      'Monthly pest control services',
-      'Annual pest control contracts',
     ],
     services: [
-      'Cockroach control',
-      'Rat and rodent control',
-      'Ant control',
-      'Termite inspection and treatment',
-      'Bed bug treatment',
-      'Fly and mosquito control',
-      'Flea and tick control',
-      'Fumigation services',
+      'Commercial pest control',
+      'Industrial pest control',
+      'Service scope discussed for the site and reported concern',
     ],
-    industries: ['Homes', 'Offices', 'Restaurants', 'Schools', 'Warehouses', 'Factories', 'Healthcare facilities'],
     faqs: [
       {
-        question: 'How often should pest control be done?',
+        question: 'What pest control services does Tshigeng Holdings offer?',
         answer:
-          'Many commercial sites benefit from monthly or quarterly pest control, while homes may need scheduled service depending on pest activity and property conditions.',
+          'The confirmed service scope is commercial and industrial pest control. Contact the team with your location, site type, and pest concern to discuss your enquiry.',
       },
       {
-        question: 'Do you provide pest control for businesses?',
+        question: 'What information should I include in an enquiry?',
         answer:
-          'Yes. Tshigeng Holdings provides pest control support for offices, restaurants, schools, warehouses, factories, and other business environments.',
-      },
-      {
-        question: 'Can I request a pest inspection?',
-        answer:
-          'Yes. Contact Tshigeng Holdings to discuss the site, pest concern, and whether an inspection or treatment plan is the best next step.',
+          'Include the site location, premises type, and a description of the pest issue. The team can then confirm availability and the next step.',
       },
     ],
     relatedLinks: [
@@ -54,15 +41,17 @@ export const serviceLandingPages = {
     seo: {
       title: 'Pest Control Services in Gauteng | Tshigeng Holdings',
       description:
-        'Tshigeng Holdings provides commercial and industrial pest control for businesses across Gauteng and South Africa. Request a pest control quote today.',
+        'Commercial and industrial pest control from Tshigeng Holdings. Share your location and site requirements to discuss service availability and a quote.',
       keywords:
-        'pest control, pest control near me, commercial pest control, residential pest control, industrial pest control, pest inspection, cockroach control, rodent control, termite treatment',
+        'commercial pest control, industrial pest control, pest control Gauteng, pest control South Africa',
     },
   },
   '/cleaning-services': {
     eyebrow: 'Cleaning & Hygiene Solutions',
     title: 'Cleaning & Hygiene Solutions',
     highlight: 'Cleaning and Hygiene',
+    image: serviceImages.officeCleaning,
+    imageAlt: 'Cleaner vacuuming an office carpet',
     description:
       'Professional cleaning and hygiene solutions for homes, offices, commercial premises, and other facilities in Centurion, Pretoria, and Gauteng.',
     introTitle: 'Cleaning and hygiene for your premises',
@@ -79,11 +68,9 @@ export const serviceLandingPages = {
     services: [
       'Regular cleaning',
       'Deep cleaning',
-      'Commercial cleaning',
-      'Hygiene equipment installation',
-      'Hygiene refill services',
+      'Commercial cleaning services',
+      'Hygiene equipment and refills',
     ],
-    industries: ['Homes', 'Offices', 'Commercial premises', 'Schools', 'Healthcare facilities', 'Retail spaces'],
     faqs: [
       {
         question: 'What types of cleaning do you provide?',
@@ -117,6 +104,8 @@ export const serviceLandingPages = {
     eyebrow: 'Hygiene Service',
     title: 'Hygiene and Sanitation Services',
     highlight: 'Hygiene',
+    image: serviceImages.hygieneWashroom,
+    imageAlt: 'Washroom sinks with wall-mounted hygiene dispensers',
     description:
       'Hygiene equipment sales, installation, maintenance, and refill services for restrooms and shared facilities in Centurion, Pretoria, and Gauteng.',
     introTitle: 'Washroom hygiene and workplace care',
@@ -171,11 +160,10 @@ export const serviceLandingPages = {
         ],
         closing:
           'From offices and commercial buildings to high-traffic facilities, we help you maintain well-stocked hygiene stations for employees, visitors, and customers.',
-        image: serviceImages.hygieneRefills,
-        imageAlt: 'Five-litre bathroom hygiene cleaner supplied for facility care',
+        image: serviceImages.hygieneWashroom,
+        imageAlt: 'Shared washroom with sinks and wall-mounted dispensers',
       },
     ],
-    industries: ['Offices', 'Schools', 'Healthcare facilities', 'Retail spaces', 'Hospitality venues', 'Commercial buildings'],
     faqs: [
       {
         question: 'What hygiene products do you supply?',
@@ -188,9 +176,9 @@ export const serviceLandingPages = {
           'Yes. Hygiene maintenance schedules can be planned around the number of users, facility type, and service requirement.',
       },
       {
-        question: 'Can businesses request hygiene and cleaning together?',
+        question: 'How do I enquire about more than one service?',
         answer:
-          'Yes. Hygiene, cleaning, and pest management can be combined into one facility support plan.',
+          'List each service you need on the contact form. Tshigeng Holdings can confirm which requirements it can quote for.',
       },
     ],
     relatedLinks: [
@@ -210,45 +198,29 @@ export const serviceLandingPages = {
     eyebrow: 'Cleaning Products Supplier',
     title: 'Cleaning Supplies and Hygiene Products',
     highlight: 'Supplies',
+    image: serviceImages.cleaningSupplies,
+    imageAlt: 'Cleaning tools, gloves, and spray bottles',
     description:
-      'Cleaning chemicals, janitorial supplies, hygiene supplies, consumables, equipment, PPE, and facility supplies for operational teams.',
+      'Cleaning materials and supplies for homes, offices, commercial premises, and other facilities. Ask us to confirm availability for your product requirements.',
     introTitle: 'Cleaning materials for facilities that need dependable supply',
     intro:
-      'Tshigeng Holdings supplies cleaning materials and facility consumables for homes, offices, commercial premises, and institutional cleaning teams.',
-    searchFocus: [
-      'Cleaning supplies',
-      'Hygiene supplies',
-      'Janitorial supplies',
-      'Cleaning chemicals',
-      'Cleaning equipment supplier',
-      'Facility supplies',
-    ],
+      'Tshigeng Holdings supplies cleaning materials for homes, offices, commercial premises, and other facilities. Product range, specifications, and availability can be confirmed when you contact the team with your requirements.',
     services: [
-      'Cleaning chemicals',
-      'Cleaning equipment',
-      'Paper towel supply',
-      'Toilet paper supply',
-      'Hand soap supply',
-      'Washroom consumables',
-      'PPE and safety equipment',
-      'Commercial cleaning products',
+      'Cleaning materials',
+      'Cleaning products',
+      'Cleaning equipment and tools',
+      'Product availability confirmed on enquiry',
     ],
-    industries: ['Facilities teams', 'Offices', 'Schools', 'Retail sites', 'Commercial premises', 'Hospitality venues'],
     faqs: [
       {
-        question: 'Do you supply cleaning chemicals?',
+        question: 'What cleaning materials can I request?',
         answer:
-          'Yes. Tshigeng Holdings supplies cleaning chemicals and consumables for facilities that need dependable cleaning material support.',
+          'Contact Tshigeng Holdings with the product or material you need. The team can confirm the available options, specifications, and quote for your request.',
       },
       {
-        question: 'Can supplies be combined with cleaning services?',
+        question: 'Do you supply a specific brand or pack size?',
         answer:
-          'Yes. Cleaning supplies can be included as part of a broader cleaning, hygiene, or facility support plan.',
-      },
-      {
-        question: 'Do you supply hygiene consumables?',
-        answer:
-          'Yes. Hygiene supplies such as paper towels, hand soap, and washroom consumables can be discussed based on the facility requirement.',
+          'Share the brand, product specification, and quantity you are looking for. The team will confirm availability before you place an order.',
       },
     ],
     relatedLinks: [
@@ -257,17 +229,19 @@ export const serviceLandingPages = {
       { label: 'Contact Us', path: '/contact' },
     ],
     seo: {
-      title: 'Cleaning Supplies and PPE | Tshigeng Holdings',
+      title: 'Cleaning Materials and Supplies | Tshigeng Holdings',
       description:
-        'Tshigeng Holdings supplies cleaning chemicals, cleaning equipment, hygiene supplies, janitorial supplies, consumables, and facility supplies.',
+        'Ask Tshigeng Holdings about cleaning materials and supplies for your home, office, commercial premises, or facility.',
       keywords:
-        'cleaning supplies, hygiene supplies, janitorial supplies, cleaning chemicals, cleaning equipment supplier, PPE supplier, facility supplies',
+        'cleaning materials, cleaning supplies, cleaning products, cleaning equipment supplier',
     },
   },
   '/commercial-cleaning': {
     eyebrow: 'Commercial Cleaning Services',
     title: 'Commercial Cleaning Services',
     highlight: 'Commercial Cleaning',
+    image: serviceImages.officeCleaning,
+    imageAlt: 'Cleaner vacuuming the carpet in an office',
     description:
       'Regular and deep commercial cleaning for offices, homes, commercial premises, and other facilities in Centurion, Pretoria, and Gauteng.',
     introTitle: 'Cleaning & Hygiene Solutions',
@@ -347,7 +321,6 @@ export const serviceLandingPages = {
         callToAction: true,
       },
     ],
-    industries: ['Homes', 'Offices', 'Commercial premises', 'Schools', 'Healthcare facilities', 'Retail spaces'],
     faqs: [
       {
         question: 'Can commercial cleaning be scheduled outside business hours?',
@@ -386,23 +359,24 @@ export const locationLandingPages = {
     title: 'Pest Control in Pretoria',
     highlight: 'Pretoria',
     location: 'Pretoria',
-    service: 'pest control',
+    service: 'commercial and industrial pest control',
+    image: serviceImages.pestControl,
+    imageAlt: 'Pest control professional treating an indoor space',
     description:
-      'Pest control services for Pretoria homes, offices, restaurants, schools, warehouses, and commercial facilities.',
+      'Commercial and industrial pest control enquiries in Pretoria. Share your site location and pest concern so Tshigeng Holdings can confirm availability and scope.',
     intro:
-      'Tshigeng Holdings supports Pretoria properties with responsive pest inspection, treatment planning, and ongoing pest management for residential and business environments.',
-    services: ['Cockroach control', 'Rodent control', 'Ant control', 'Termite inspection', 'Bed bug treatment', 'Commercial pest control'],
-    industries: ['Homes', 'Offices', 'Restaurants', 'Schools', 'Warehouses', 'Healthcare facilities'],
+      'Tshigeng Holdings provides commercial and industrial pest control. For a Pretoria enquiry, share the facility address or area, premises type, and pest concern. The team can confirm whether it can assist and discuss the next step.',
+    services: ['Commercial pest control', 'Industrial pest control'],
     faqs: [
       {
-        question: 'Do you provide pest control near Pretoria?',
+        question: 'Can I enquire about commercial pest control in Pretoria?',
         answer:
-          'Yes. Tshigeng Holdings supports pest control enquiries in Pretoria and surrounding Gauteng areas.',
+          'Yes. Contact Tshigeng Holdings with the Pretoria site location and your requirements. The team can confirm availability and scope.',
       },
       {
-        question: 'Can Pretoria businesses request monthly pest control?',
+        question: 'What details help with a local pest control enquiry?',
         answer:
-          'Yes. Monthly or scheduled pest control can be discussed for businesses that need ongoing pest management.',
+          'Share the site address or area, premises type, and a description of the pest concern.',
       },
     ],
     relatedLinks: [
@@ -413,9 +387,9 @@ export const locationLandingPages = {
     seo: {
       title: 'Pest Control Pretoria | Tshigeng Holdings',
       description:
-        'Need pest control in Pretoria? Tshigeng Holdings provides residential and commercial pest control for homes, offices, restaurants, schools, and facilities.',
+        'Ask Tshigeng Holdings about commercial and industrial pest control in Pretoria. Share your location and site requirements to confirm availability.',
       keywords:
-        'pest control Pretoria, pest control near me Pretoria, cockroach control Pretoria, rodent control Pretoria, commercial pest control Pretoria',
+        'commercial pest control Pretoria, industrial pest control Pretoria, pest control Pretoria',
     },
   },
   '/pest-control-johannesburg': {
@@ -423,23 +397,24 @@ export const locationLandingPages = {
     title: 'Pest Control in Johannesburg',
     highlight: 'Johannesburg',
     location: 'Johannesburg',
-    service: 'pest control',
+    service: 'commercial and industrial pest control',
+    image: serviceImages.pestControl,
+    imageAlt: 'Pest control professional treating an indoor space',
     description:
-      'Commercial and residential pest control support for Johannesburg offices, homes, warehouses, restaurants, and managed facilities.',
+      'Commercial and industrial pest control enquiries in Johannesburg. Share your site location and pest concern so Tshigeng Holdings can confirm availability and scope.',
     intro:
-      'Tshigeng Holdings helps Johannesburg clients manage pest risks with practical pest control services, inspection support, and scheduled maintenance options.',
-    services: ['Commercial pest control', 'Residential pest control', 'Rodent control', 'Cockroach control', 'Fly control', 'Warehouse pest management'],
-    industries: ['Offices', 'Warehouses', 'Factories', 'Restaurants', 'Retail sites', 'Homes'],
+      'Tshigeng Holdings provides commercial and industrial pest control. For a Johannesburg enquiry, share the facility address or area, premises type, and pest concern. The team can confirm whether it can assist and discuss the next step.',
+    services: ['Commercial pest control', 'Industrial pest control'],
     faqs: [
       {
-        question: 'Do you offer pest control for Johannesburg businesses?',
+        question: 'Can I enquire about commercial pest control in Johannesburg?',
         answer:
-          'Yes. Tshigeng Holdings supports Johannesburg businesses with pest management for offices, warehouses, restaurants, retail spaces, and industrial sites.',
+          'Yes. Contact Tshigeng Holdings with the Johannesburg site location and your requirements. The team can confirm availability and scope.',
       },
       {
-        question: 'Can you help with rodents and cockroaches?',
+        question: 'What details help with a local pest control enquiry?',
         answer:
-          'Yes. Rodent control and cockroach control are common pest control requirements that can be assessed and planned for your site.',
+          'Share the site address or area, premises type, and a description of the pest concern.',
       },
     ],
     relatedLinks: [
@@ -450,9 +425,9 @@ export const locationLandingPages = {
     seo: {
       title: 'Pest Control Johannesburg | Tshigeng Holdings',
       description:
-        'Tshigeng Holdings provides pest control in Johannesburg for homes, offices, restaurants, warehouses, and commercial facilities.',
+        'Ask Tshigeng Holdings about commercial and industrial pest control in Johannesburg. Share your location and site requirements to confirm availability.',
       keywords:
-        'pest control Johannesburg, commercial pest control Johannesburg, residential pest control Johannesburg, rodent control Johannesburg, cockroach control Johannesburg',
+        'commercial pest control Johannesburg, industrial pest control Johannesburg, pest control Johannesburg',
     },
   },
   '/pest-control-centurion': {
@@ -461,23 +436,24 @@ export const locationLandingPages = {
     highlight: 'Centurion',
     location: 'Centurion',
     nearbyAreas: ['Irene'],
-    service: 'pest control',
+    service: 'commercial and industrial pest control',
+    image: serviceImages.pestControl,
+    imageAlt: 'Pest control professional treating an indoor space',
     description:
-      'Pest control services for Centurion homes, estates, offices, schools, hospitality sites, and commercial facilities.',
+      'Commercial and industrial pest control enquiries in Centurion and Irene. Share your site location and pest concern so Tshigeng Holdings can confirm availability and scope.',
     intro:
-      'Based close to Irene and Centurion, Tshigeng Holdings is well positioned to support local pest control enquiries for homes, offices, and managed facilities.',
-    services: ['Pest inspection', 'Cockroach control', 'Rodent control', 'Ant control', 'Commercial pest control', 'Residential pest control'],
-    industries: ['Homes', 'Estates', 'Offices', 'Schools', 'Hospitality sites', 'Healthcare facilities'],
+      'Tshigeng Holdings is based at 3 Saltus Street, Galloway Estate, Irene, Centurion. For commercial or industrial pest control enquiries in Centurion, share the site type and pest concern so the team can confirm the next step.',
+    services: ['Commercial pest control', 'Industrial pest control'],
     faqs: [
       {
-        question: 'Do you provide pest control in Centurion?',
+        question: 'Can I enquire about pest control in Centurion or Irene?',
         answer:
-          'Yes. Tshigeng Holdings supports Centurion and nearby areas including Irene with pest control and facility service enquiries.',
+          'Yes. Contact Tshigeng Holdings with your site location and requirements. The team can confirm availability and scope for your enquiry.',
       },
       {
-        question: 'Can homes request pest control?',
+        question: 'What pest control does Tshigeng Holdings list?',
         answer:
-          'Yes. Residential pest control can be arranged according to the type of pest activity and the property requirements.',
+          'The listed pest control services are for commercial and industrial premises. Contact the team with your site details to discuss whether it can assist.',
       },
     ],
     relatedLinks: [
@@ -488,9 +464,9 @@ export const locationLandingPages = {
     seo: {
       title: 'Pest Control Centurion | Tshigeng Holdings',
       description:
-        'Tshigeng Holdings provides pest control in Centurion and Irene for homes, offices, estates, schools, and commercial facilities.',
+        'Ask Tshigeng Holdings about commercial and industrial pest control in Centurion and Irene. Share your site requirements to confirm availability.',
       keywords:
-        'pest control Centurion, pest control Irene, residential pest control Centurion, commercial pest control Centurion, cockroach control Centurion',
+        'commercial pest control Centurion, industrial pest control Centurion, pest control Irene',
     },
   },
   '/cleaning-services-pretoria': {
@@ -498,18 +474,19 @@ export const locationLandingPages = {
     title: 'Cleaning Services in Pretoria',
     highlight: 'Pretoria',
     location: 'Pretoria',
-    service: 'cleaning services',
+    service: 'commercial cleaning services',
+    image: serviceImages.officeCleaning,
+    imageAlt: 'Cleaner vacuuming the carpet in an office',
     description:
-      'Regular and deep cleaning for Pretoria offices, homes, commercial premises, schools, healthcare environments, and retail spaces.',
+      'Regular and deep commercial cleaning enquiries for offices and commercial premises in Pretoria. Share your site requirements to discuss availability and scope.',
     intro:
-      'Tshigeng Holdings provides cleaning services in Pretoria for offices, homes, commercial premises, schools, healthcare environments, and retail spaces. Cleaning can be tailored to the site, schedule, and areas that need attention.',
-    services: ['Regular cleaning', 'Commercial cleaning', 'Deep cleaning', 'Office cleaning', 'School cleaning', 'Retail cleaning'],
-    industries: ['Offices', 'Homes', 'Schools', 'Healthcare facilities', 'Retail spaces', 'Commercial buildings'],
+      'Tshigeng Holdings provides regular and deep cleaning services. For Pretoria enquiries, share the address or area, premises type, the cleaning tasks required, and your preferred schedule so the team can discuss a suitable scope.',
+    services: ['Commercial cleaning', 'Regular cleaning', 'Deep cleaning'],
     faqs: [
       {
-        question: 'Do you provide office cleaning in Pretoria?',
+        question: 'Can I enquire about commercial cleaning in Pretoria?',
         answer:
-          'Yes. Tshigeng Holdings supports office cleaning and commercial cleaning enquiries in Pretoria and surrounding areas.',
+          'Yes. Share the site location and the cleaning tasks you need. Tshigeng Holdings can confirm availability and discuss the scope.',
       },
       {
         question: 'Can I request a cleaning quote?',
@@ -525,7 +502,7 @@ export const locationLandingPages = {
     seo: {
       title: 'Cleaning Services Pretoria | Tshigeng Holdings',
       description:
-        'Tshigeng Holdings provides regular and deep cleaning in Pretoria for offices, homes, commercial premises, schools, and retail spaces.',
+        'Ask Tshigeng Holdings about regular and deep commercial cleaning in Pretoria for your office or commercial premises.',
       keywords:
         'cleaning services Pretoria, office cleaning Pretoria, commercial cleaning Pretoria, deep cleaning Pretoria',
     },
@@ -536,12 +513,13 @@ export const locationLandingPages = {
     highlight: 'Gauteng',
     location: 'Gauteng',
     service: 'hygiene services',
+    image: serviceImages.hygieneWashroom,
+    imageAlt: 'Washroom sinks with wall-mounted hygiene dispensers',
     description:
       'Supply, installation, maintenance, and servicing of soap dispensers, air hand dryers, ladies sanitary bins, toilet seat wipes, paper towel dispensers, air fresheners, and chemical deep cleaning for Gauteng businesses.',
     intro:
       'Tshigeng Holdings supplies, installs, maintains, and services hygiene equipment for Gauteng businesses. Offerings include soap dispensers, air hand dryers, ladies sanitary bins, toilet seat wipes, paper towel dispensers, air fresheners, and chemical deep cleaning.',
     services: ['Soap dispenser supply, installation, maintenance, and servicing', 'Air hand dryer supply, installation, maintenance, and servicing', 'Ladies sanitary bin supply and servicing', 'Toilet seat wipes', 'Paper towel dispensers', 'Air freshener supply and servicing', 'Chemical deep cleaning'],
-    industries: ['Offices', 'Schools', 'Healthcare facilities', 'Retail sites', 'Hospitality venues', 'Commercial buildings'],
     faqs: [
       {
         question: 'Do you provide hygiene services in Gauteng?',
@@ -549,9 +527,9 @@ export const locationLandingPages = {
           'Yes. Tshigeng Holdings supports hygiene service enquiries across Gauteng, including washroom equipment and consumables.',
       },
       {
-        question: 'Can hygiene services be combined with cleaning?',
+        question: 'What should I include in a hygiene services enquiry?',
         answer:
-          'Yes. Hygiene services, cleaning, and pest control can be discussed together for a practical facility support plan.',
+          'Include your location, facility type, and the equipment, maintenance, refill, or cleaning service you need. The team can confirm availability and scope.',
       },
     ],
     relatedLinks: [
@@ -572,7 +550,7 @@ export const locationLandingPages = {
 export const landingPageMeta = Object.fromEntries(
   [...Object.entries(serviceLandingPages), ...Object.entries(locationLandingPages)].map(([path, page]) => [
     path,
-    page.seo,
+    { ...page.seo, image: page.image },
   ])
 );
 

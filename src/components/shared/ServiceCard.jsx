@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-export default function ServiceCard({ icon: Icon, title, description, image, path = '/services', index = 0 }) {
+export default function ServiceCard({ icon: Icon, title, description, image, imageAlt, path = '/services', index = 0 }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -17,7 +17,7 @@ export default function ServiceCard({ icon: Icon, title, description, image, pat
           <div className="relative h-48 overflow-hidden">
             <img
               src={image}
-              alt={title}
+              alt={imageAlt || `${title} service`}
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               loading="lazy"
               decoding="async"

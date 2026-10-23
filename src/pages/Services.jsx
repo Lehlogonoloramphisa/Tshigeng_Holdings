@@ -18,8 +18,8 @@ const services = [
   {
     icon: Bug,
     title: 'Pest Control',
-    description: 'Commercial and industrial pest control for business premises, factories, warehouses, and managed facilities.',
-    features: ['Commercial Pest Control', 'Industrial Pest Control', 'Site Support', 'Pest Control Contracts'],
+    description: 'Commercial and industrial pest control. Share your site location and pest concern to discuss availability and scope.',
+    features: ['Commercial Pest Control', 'Industrial Pest Control', 'Site Requirements Reviewed'],
     image: serviceImages.pestControl,
     imageAlt: 'Pest control technician treating an indoor space',
     path: '/pest-control',
@@ -36,8 +36,8 @@ const services = [
   {
     icon: Building2,
     title: 'Cleaning Materials & Supplies',
-    description: 'Cleaning equipment, chemicals, hygiene products, and consumables for homes, offices, and commercial facilities.',
-    features: ['Cleaning Equipment', 'Cleaning Chemicals', 'Consumables', 'Supply Coordination'],
+    description: 'Cleaning materials and supplies for homes, offices, commercial premises, and other facilities. Product availability is confirmed on enquiry.',
+    features: ['Cleaning Materials', 'Cleaning Products', 'Equipment and Tools', 'Availability on Request'],
     image: serviceImages.cleaningSupplies,
     imageAlt: 'Cleaning products and tools ready for use',
     path: '/cleaning-supplies',
@@ -105,7 +105,7 @@ export default function Services() {
                 </div>
 
                 <div className={isEven ? '' : 'lg:order-1'}>
-                  <span className="text-xs font-body font-semibold tracking-[0.2em] uppercase text-accent mb-3 block">
+                  <span className="text-xs font-body font-semibold tracking-[0.2em] uppercase text-primary mb-3 block">
                     Service {String(index + 1).padStart(2, '0')}
                   </span>
                   <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -123,18 +123,18 @@ export default function Services() {
                     ))}
                   </ul>
                   <div className="flex flex-col gap-3 sm:flex-row">
-                    <Link to={service.path}>
-                      <Button className="bg-primary text-primary-foreground hover:bg-primary/90 font-body font-semibold">
+                    <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90 font-body font-semibold">
+                      <Link to={service.path}>
                         View Service Details
                         <ArrowRight className="w-4 h-4 ml-2" />
-                      </Button>
-                    </Link>
-                    <Link to="/contact">
-                      <Button variant="outline" className="font-body font-semibold hover:bg-primary hover:text-primary-foreground">
+                      </Link>
+                    </Button>
+                    <Button asChild variant="outline" className="font-body font-semibold hover:bg-primary hover:text-primary-foreground">
+                      <Link to="/contact">
                         Request This Service
                         <ArrowRight className="w-4 h-4 ml-2" />
-                      </Button>
-                    </Link>
+                      </Link>
+                    </Button>
                   </div>
                 </div>
               </motion.div>

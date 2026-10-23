@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Phone, Mail, MapPin, Send, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Label } from '@/components/ui/label';
-import { toast } from 'sonner';
 
 const contactInfo = [
   {
@@ -28,11 +27,19 @@ const contactInfo = [
     action: 'https://www.google.com/maps?q=3+Saltus+Street+Galloway+Estate+Irene+Centurion+Gauteng+South+Africa',
   },
   {
-    icon: Clock,
-    title: 'Social Media',
-    details: ['@TshigengHoldings'],
+    icon: MapPin,
+    title: 'Service Enquiries',
+    details: ['Centurion, Pretoria, and Gauteng', 'Ask us about availability elsewhere in South Africa'],
   },
 ];
+
+const serviceLabels = {
+  hygiene: 'Hygiene Services',
+  'pest-control': 'Pest Control',
+  'commercial-cleaning': 'Commercial Cleaning Services',
+  'cleaning-materials': 'Cleaning Materials',
+  multiple: 'Multiple Services',
+};
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -43,25 +50,24 @@ export default function Contact() {
     service: '',
     message: '',
   });
-  const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
-
   const handleChange = (field, value) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    if (!formData.name || !formData.email || !formData.message) {
-      toast.error('Please fill in all required fields');
-      return;
-    }
-    setLoading(true);
-    // Simulate form submission
-    await new Promise((r) => setTimeout(r, 1500));
-    setSubmitted(true);
-    setLoading(false);
-    toast.success('Message sent successfully!');
+    const serviceName = serviceLabels[formData.service] || 'General service enquiry';
+    const subject = `Website enquiry: ${serviceName}`;
+    const body = [
+      `Name: ${formData.name}`,
+      `Email: ${formData.email}`,
+      `Phone: ${formData.phone || 'Not provided'}`,
+      `Company: ${formData.company || 'Not provided'}`,
+      `Service: ${serviceName}`,
+      '',
+      formData.message,
+    ].join('\n');
+    window.location.href = `mailto:tshigeng.buti@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
   return (
@@ -86,7 +92,7 @@ export default function Contact() {
               <span className="text-accent">Service</span> Requirements
             </h1>
             <p className="mt-6 text-lg font-body text-white/70 leading-relaxed max-w-2xl">
-              Use the details below or send us a message to connect with Tshigeng Holdings
+              Use the details below or prepare an email enquiry to connect with Tshigeng Holdings
               for hygiene, pest control, cleaning, and cleaning material enquiries.
             </p>
           </motion.div>
@@ -148,36 +154,12 @@ export default function Contact() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              {submitted ? (
-                <div className="bg-card rounded-2xl border border-border p-12 text-center">
-                  <div className="w-20 h-20 rounded-full [background-color:hsl(var(--support-green)/0.12)] flex items-center justify-center mx-auto mb-6">
-                    <CheckCircle2 className="w-10 h-10 text-support-green" />
-                  </div>
-                  <h3 className="font-heading text-2xl font-bold text-card-foreground mb-3">
-                    Message Received
-                  </h3>
-                  <p className="font-body text-muted-foreground mb-8">
-                    Thank you for reaching out. Our team will review your enquiry and respond
-                    within one business day.
-                  </p>
-                  <Button
-                    onClick={() => {
-                      setSubmitted(false);
-                      setFormData({ name: '', email: '', phone: '', company: '', service: '', message: '' });
-                    }}
-                    variant="outline"
-                    className="font-body font-semibold"
-                  >
-                    Send Another Message
-                  </Button>
-                </div>
-              ) : (
-                <div className="bg-card rounded-2xl border border-border p-8 md:p-10">
+              <div className="bg-card rounded-2xl border border-border p-8 md:p-10 shadow-sm">
                   <h2 className="font-heading text-2xl font-bold text-card-foreground mb-2">
-                    Send Us a Message
+                    Prepare an Email Enquiry
                   </h2>
                   <p className="font-body text-sm text-muted-foreground mb-8">
-                    Fill in your details and we'll get back to you within 24 hours.
+                    Complete the details below. Your email app will open with a draft for you to review and send.
                   </p>
 
                   <form onSubmit={handleSubmit} className="space-y-5">
@@ -188,6 +170,7 @@ export default function Contact() {
                         </Label>
                         <Input
                           id="name"
+                          autoComplete="name"
                           placeholder="John Doe"
                           value={formData.name}
                           onChange={(e) => handleChange('name', e.target.value)}
@@ -202,6 +185,7 @@ export default function Contact() {
                         <Input
                           id="email"
                           type="email"
+                          autoComplete="email"
                           placeholder="john@company.co.za"
                           value={formData.email}
                           onChange={(e) => handleChange('email', e.target.value)}
@@ -218,6 +202,8 @@ export default function Contact() {
                         </Label>
                         <Input
                           id="phone"
+                          type="tel"
+                          autoComplete="tel"
                           placeholder="+27 (0XX) XXX XXXX"
                           value={formData.phone}
                           onChange={(e) => handleChange('phone', e.target.value)}
@@ -230,6 +216,7 @@ export default function Contact() {
                         </Label>
                         <Input
                           id="company"
+                          autoComplete="organization"
                           placeholder="Your company"
                           value={formData.company}
                           onChange={(e) => handleChange('company', e.target.value)}
@@ -239,11 +226,11 @@ export default function Contact() {
                     </div>
 
                     <div>
-                      <Label className="font-body text-sm font-medium mb-2 block">
+                      <Label htmlFor="service" className="font-body text-sm font-medium mb-2 block">
                         Service of Interest
                       </Label>
                       <Select value={formData.service} onValueChange={(v) => handleChange('service', v)}>
-                        <SelectTrigger className="font-body">
+                        <SelectTrigger id="service" className="font-body">
                           <SelectValue placeholder="Select a service" />
                         </SelectTrigger>
                         <SelectContent>
@@ -266,30 +253,20 @@ export default function Contact() {
                         value={formData.message}
                         onChange={(e) => handleChange('message', e.target.value)}
                         className="font-body h-32 resize-none"
+                        maxLength={1500}
                         required
                       />
                     </div>
 
                     <Button
                       type="submit"
-                      disabled={loading}
                       className="w-full bg-accent text-accent-foreground hover:bg-accent/90 font-body font-semibold py-6 text-base shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30 transition-all duration-300"
                     >
-                      {loading ? (
-                        <div className="flex items-center gap-2">
-                          <div className="w-5 h-5 border-2 border-accent-foreground/30 border-t-accent-foreground rounded-full animate-spin" />
-                          Sending...
-                        </div>
-                      ) : (
-                        <>
-                          Send Message
-                          <Send className="w-5 h-5 ml-2" />
-                        </>
-                      )}
+                      Open Email Draft
+                      <Send className="w-5 h-5 ml-2" />
                     </Button>
                   </form>
-                </div>
-              )}
+              </div>
             </motion.div>
 
             {/* Map area */}
@@ -320,29 +297,27 @@ export default function Contact() {
                 </div>
               </div>
 
-              <a
-                href="https://www.google.com/maps?q=3+Saltus+Street+Galloway+Estate+Irene+Centurion+Gauteng+South+Africa"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Button
+                asChild
+                variant="outline"
+                className="w-full font-body font-semibold py-6 hover:bg-primary hover:text-primary-foreground transition-all duration-300"
               >
-                <Button
-                  variant="outline"
-                  className="w-full font-body font-semibold py-6 hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                <a
+                  href="https://www.google.com/maps?q=3+Saltus+Street+Galloway+Estate+Irene+Centurion+Gauteng+South+Africa"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Open in Google Maps
                   <ArrowRight className="w-5 h-5 ml-2" />
-                </Button>
-              </a>
+                </a>
+              </Button>
 
               <div className="bg-muted/50 rounded-2xl p-8 border border-border">
                 <h3 className="font-heading text-lg font-bold text-foreground mb-4">
-                  Serving the People
+                  About Service Enquiries
                 </h3>
                 <p className="font-body text-sm text-muted-foreground leading-relaxed">
-                  Tshigeng Holdings serves clients across South Africa with facilities management, 
-                  pest control, hygiene, cleaning, and cleaning material supply. 
-                  We are committed to delivering reliable, high quality solutions that meet the needs of businesses, 
-                  organizations, and households.
+                  Tshigeng Holdings offers commercial and industrial pest control, commercial cleaning, hygiene equipment and refill services, and cleaning materials. Include your location and requirements so the team can confirm availability and discuss the right next step.
                 </p>
               </div>
             </motion.div>

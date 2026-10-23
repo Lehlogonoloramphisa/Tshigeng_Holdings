@@ -12,7 +12,7 @@ export default function SectionHeading({ eyebrow, title, description, align = 'c
     >
       {eyebrow && (
         <span className={`inline-block text-xs font-body font-semibold tracking-[0.2em] uppercase mb-4 ${
-          light ? 'text-accent' : 'text-accent'
+          light ? 'text-accent' : 'text-primary'
         }`}>
           {eyebrow}
         </span>

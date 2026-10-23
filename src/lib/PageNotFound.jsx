@@ -18,17 +18,17 @@ export default function PageNotFound() {
           Let's get you back on track.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-          <Link to="/">
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 font-body font-semibold">
+          <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90 font-body font-semibold">
+            <Link to="/">
               <Home className="w-4 h-4 mr-2" />
               Back to Home
-            </Button>
-          </Link>
-          <Link to="/contact">
-            <Button variant="outline" className="font-body font-semibold">
+            </Link>
+          </Button>
+          <Button asChild variant="outline" className="font-body font-semibold">
+            <Link to="/contact">
               Contact Us
-            </Button>
-          </Link>
+            </Link>
+          </Button>
         </div>
       </div>
     </div>

@@ -1,68 +1,57 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Clock } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, CalendarDays, MapPin, ClipboardList } from 'lucide-react';
 import SectionHeading from '@/components/shared/SectionHeading';
 
-const operatingHours = [
+const enquiryDetails = [
   {
-    days: 'Monday - Friday',
-    hours: '08:00 - 17:00',
+    icon: MapPin,
+    title: 'Where is the site?',
+    description: 'Include the town or area and the type of premises.',
   },
   {
-    days: 'Saturday - Sunday',
-    hours: 'Closed',
+    icon: ClipboardList,
+    title: 'What do you need?',
+    description: 'Describe the service, cleaning tasks, equipment, or materials.',
   },
   {
-    days: 'Public Holidays',
-    hours: 'Closed',
+    icon: CalendarDays,
+    title: 'When do you need it?',
+    description: 'Share a preferred schedule so availability can be confirmed.',
   },
 ];
 
 export default function OperatingHoursSection() {
   return (
-    <section className="py-16 md:py-20 bg-background">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="bg-muted/50 py-16 md:py-20">
+      <div className="mx-auto max-w-7xl px-6">
         <SectionHeading
-          eyebrow="Business Hours"
-          title="Operating Hours"
-          description="Plan your service enquiry around our weekly operating schedule."
+          eyebrow="Start Here"
+          title="Make your service enquiry clear"
+          description="A few practical details help Tshigeng Holdings understand what you are looking for."
         />
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-40px' }}
-          transition={{ duration: 0.5 }}
-          className="mx-auto max-w-3xl overflow-hidden rounded-2xl border border-border bg-card shadow-xl shadow-primary/5"
-        >
-          <div className="flex items-center gap-4 border-b border-border bg-primary px-6 py-5 text-primary-foreground md:px-8">
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent text-accent-foreground">
-              <Clock className="h-6 w-6" />
-            </div>
-            <div>
-              <h3 className="font-heading text-2xl font-bold">Visit or Contact Us</h3>
-              <p className="mt-1 font-body text-sm text-primary-foreground/75">
-                Our team is available during the hours below.
-              </p>
-            </div>
-          </div>
-
-          <div className="divide-y divide-border">
-            {operatingHours.map((item) => (
-              <div
-                key={item.days}
-                className="flex flex-col gap-2 px-6 py-5 sm:flex-row sm:items-center sm:justify-between md:px-8"
-              >
-                <span className="font-body text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-                  {item.days}
+        <div className="grid gap-5 md:grid-cols-3">
+          {enquiryDetails.map(({ icon: Icon, title, description }, index) => (
+            <article key={title} className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+              <div className="mb-5 flex items-center justify-between">
+                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/5 text-primary">
+                  <Icon className="h-5 w-5" aria-hidden="true" />
                 </span>
-                <span className="font-heading text-2xl font-bold text-foreground">
-                  {item.hours}
-                </span>
+                <span className="font-body text-xs font-semibold tracking-[0.16em] text-muted-foreground">0{index + 1}</span>
               </div>
-            ))}
-          </div>
-        </motion.div>
+              <h3 className="font-heading text-xl font-bold text-card-foreground">{title}</h3>
+              <p className="mt-3 font-body text-sm leading-relaxed text-muted-foreground">{description}</p>
+            </article>
+          ))}
+        </div>
+
+        <div className="mt-8 flex flex-col items-center justify-between gap-4 rounded-2xl bg-primary px-6 py-6 text-white sm:flex-row sm:px-8">
+          <p className="font-body text-sm leading-relaxed text-white/80">The team will confirm availability and discuss the next step for your request.</p>
+          <Link to="/contact" className="inline-flex shrink-0 items-center gap-2 rounded-md bg-accent px-5 py-3 font-body text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent/90">
+            Contact Us <ArrowRight className="h-4 w-4" aria-hidden="true" />
+          </Link>
+        </div>
       </div>
     </section>
   );

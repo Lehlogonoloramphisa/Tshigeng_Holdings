@@ -13,13 +13,15 @@ export default function ServicesPreview({ images }) {
       title: 'Hygiene Services',
       description: 'Hygiene equipment sales, installation, maintenance, and refill services for restrooms and shared facilities.',
       image: images.hygiene,
+      imageAlt: 'Washroom sinks with wall-mounted hygiene dispensers',
       path: '/hygiene-services',
     },
     {
       icon: Bug,
       title: 'Pest Control',
-      description: 'Commercial and industrial pest control for business premises and facilities.',
+      description: 'Commercial and industrial pest control, with site scope and availability discussed for each enquiry.',
       image: images.pestControl,
+      imageAlt: 'Pest control professional treating an indoor space',
       path: '/pest-control',
     },
     {
@@ -27,13 +29,15 @@ export default function ServicesPreview({ images }) {
       title: 'Commercial Cleaning Services',
       description: 'Regular and deep cleaning for homes, offices, commercial premises, and other facilities.',
       image: images.cleaning,
+      imageAlt: 'Cleaner vacuuming an office carpet',
       path: '/commercial-cleaning',
     },
     {
       icon: Package,
       title: 'Cleaning Materials & Supplies',
-      description: 'Cleaning chemicals, equipment, consumables, and hygiene products for homes, offices, and commercial facilities.',
+      description: 'Cleaning materials and supplies for homes, offices, commercial premises, and other facilities. Product availability is confirmed on enquiry.',
       image: images.cleaningMaterials,
+      imageAlt: 'Cleaning tools, gloves, and spray bottles',
       path: '/cleaning-supplies',
     },
   ];
@@ -60,12 +64,12 @@ export default function ServicesPreview({ images }) {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="text-center mt-12"
         >
-          <Link to="/services">
-            <Button variant="outline" size="lg" className="font-body font-semibold px-8 hover:bg-primary hover:text-primary-foreground transition-all duration-300">
+          <Button asChild variant="outline" size="lg" className="font-body font-semibold px-8 hover:bg-primary hover:text-primary-foreground transition-all duration-300">
+            <Link to="/services">
               View All Services
               <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
-          </Link>
+            </Link>
+          </Button>
         </motion.div>
       </div>
     </section>

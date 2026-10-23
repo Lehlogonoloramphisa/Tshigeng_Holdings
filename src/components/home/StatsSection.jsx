@@ -1,32 +1,28 @@
 import React from 'react';
-import StatCounter from '@/components/shared/StatCounter';
+import { CalendarDays, MapPin, Sparkles, Bug } from 'lucide-react';
 
-const stats = [
-  { value: '2011', suffix: '', label: 'Established' },
-  { value: '4', suffix: '', label: 'Core Service Lines' },
-  { value: '5', suffix: '+', label: 'Target Sectors' },
-  { value: '10', suffix: '+', label: 'Years of Service' },
+const businessDetails = [
+  { icon: CalendarDays, label: 'Established', value: '2011' },
+  { icon: MapPin, label: 'Based in', value: 'Irene, Centurion' },
+  { icon: Sparkles, label: 'Cleaning & hygiene', value: 'Homes and facilities' },
+  { icon: Bug, label: 'Pest control', value: 'Commercial & industrial' },
 ];
 
 export default function StatsSection() {
   return (
-    <section className="relative py-16 md:py-20 bg-brand-gradient overflow-hidden">
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-accent rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-support-green rounded-full blur-3xl" />
-      </div>
-      <div className="relative max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
-          {stats.map((stat) => (
-            <StatCounter
-              key={stat.label}
-              value={stat.value}
-              suffix={stat.suffix}
-              label={stat.label}
-              light
-            />
-          ))}
-        </div>
+    <section aria-label="Tshigeng Holdings at a glance" className="border-y border-white/10 bg-primary py-7 text-primary-foreground md:py-9">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-5 px-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+        {businessDetails.map(({ icon: Icon, label, value }) => (
+          <div key={label} className="flex items-center gap-4 border-white/15 sm:border-l sm:pl-5 first:sm:border-l-0 first:sm:pl-0">
+            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/10 text-accent">
+              <Icon className="h-5 w-5" aria-hidden="true" />
+            </span>
+            <div>
+              <p className="font-body text-xs font-semibold uppercase tracking-[0.14em] text-white/60">{label}</p>
+              <p className="mt-1 font-body text-sm font-semibold text-white">{value}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );

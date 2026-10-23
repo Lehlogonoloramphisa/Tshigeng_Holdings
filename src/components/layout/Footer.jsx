@@ -56,7 +56,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-sm text-primary-foreground/70 font-body leading-relaxed">
-              Established in 2011, Tshigeng Holdings provides pest control, commercial cleaning, hygiene solutions, and cleaning supplies in Gauteng and across South Africa.
+              Established in 2011 and based in Irene, Centurion, Tshigeng Holdings offers commercial cleaning, hygiene services, cleaning materials, and commercial and industrial pest control. Contact us to confirm service availability for your area.
             </p>
           </div>
 

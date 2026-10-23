@@ -8,7 +8,7 @@ import CTASection from '@/components/home/CTASection';
 import { serviceImages } from '@/data/serviceImages';
 
 const IMAGES = {
-  hero: 'https://images.pexels.com/photos/27085598/pexels-photo-27085598.jpeg?auto=compress&cs=tinysrgb&w=1600',
+  hero: serviceImages.cleaningDesk,
   pestControl: serviceImages.pestControl,
   hygiene: serviceImages.hygieneWashroom,
   cleaning: serviceImages.commercialCleaning,
