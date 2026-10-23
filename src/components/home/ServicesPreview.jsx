@@ -8,20 +8,20 @@ import { motion } from 'framer-motion';
 export default function ServicesPreview({ images }) {
   const services = [
     {
-      icon: Droplets,
-      title: 'Hygiene Services',
-      description: 'Hygiene equipment sales, installation, maintenance, and refill services for restrooms and shared facilities.',
-      image: images.hygiene,
-      imageAlt: 'Restroom basins with wall-mounted hygiene dispensers',
-      path: '/hygiene-services',
-    },
-    {
       icon: Bug,
       title: 'Pest Control',
       description: 'Commercial and industrial pest control for business premises and facilities.',
       image: images.pestControl,
       imageAlt: 'Pest control technician applying treatment indoors with a hand sprayer',
       path: '/pest-control',
+    },
+    {
+      icon: Droplets,
+      title: 'Hygiene Services',
+      description: 'Hygiene equipment sales, installation, maintenance, and refill services for restrooms and shared facilities.',
+      image: images.hygiene,
+      imageAlt: 'Restroom basins with wall-mounted hygiene dispensers',
+      path: '/hygiene-services',
     },
     {
       icon: Sparkles,

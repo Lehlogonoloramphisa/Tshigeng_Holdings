@@ -7,15 +7,6 @@ import { serviceImages } from '@/data/serviceImages';
 
 const services = [
   {
-    icon: Droplets,
-    title: 'Hygiene Services',
-    description: 'Hygiene equipment sales, installation, maintenance, and refill services for restrooms and shared facilities.',
-    features: ['Soap Dispensers', 'Paper Towel Dispensers', 'Hand Sanitiser Stations', 'Sanitary Bins', 'Air Hand Dryers', 'Toilet Seat Wipes and Air Fresheners', 'Hygiene Refills'],
-    image: serviceImages.hygieneWashroom,
-    imageAlt: 'Clean public washroom with a row of sinks',
-    path: '/hygiene-services',
-  },
-  {
     icon: Bug,
     title: 'Pest Control',
     description: 'Commercial and industrial pest control. Share your site location and pest concern to discuss availability and scope.',
@@ -23,6 +14,15 @@ const services = [
     image: serviceImages.pestControl,
     imageAlt: 'Pest control technician treating an indoor space',
     path: '/pest-control',
+  },
+  {
+    icon: Droplets,
+    title: 'Hygiene Services',
+    description: 'Hygiene equipment sales, installation, maintenance, and refill services for restrooms and shared facilities.',
+    features: ['Soap Dispensers', 'Paper Towel Dispensers', 'Hand Sanitiser Stations', 'Sanitary Bins', 'Air Hand Dryers', 'Toilet Seat Wipes and Air Fresheners', 'Hygiene Refills'],
+    image: serviceImages.hygieneWashroom,
+    imageAlt: 'Clean public washroom with a row of sinks',
+    path: '/hygiene-services',
   },
   {
     icon: Sparkles,
@@ -62,7 +62,7 @@ export default function Services() {
               Our Capabilities
             </span>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-              Cleaning, Hygiene & Pest Control Services
+              Pest Control, Cleaning & Hygiene Services
             </h1>
             <p className="mt-6 text-lg font-body text-white/70 leading-relaxed max-w-2xl">
               We provide professional cleaning and hygiene solutions for homes, offices, commercial premises, and other facilities, together with pest control and cleaning materials.

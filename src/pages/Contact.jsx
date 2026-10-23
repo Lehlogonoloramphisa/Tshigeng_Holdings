@@ -41,8 +41,8 @@ const contactInfo = [
 ];
 
 const serviceLabels = {
-  hygiene: 'Hygiene Services',
   'pest-control': 'Pest Control',
+  hygiene: 'Hygiene Services',
   'commercial-cleaning': 'Commercial Cleaning Services',
   'cleaning-materials': 'Cleaning Materials',
   multiple: 'Multiple Services',
@@ -242,8 +242,8 @@ export default function Contact() {
                           <SelectValue placeholder="Select a service" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="hygiene">Hygiene Services</SelectItem>
                           <SelectItem value="pest-control">Pest Control</SelectItem>
+                          <SelectItem value="hygiene">Hygiene Services</SelectItem>
                           <SelectItem value="commercial-cleaning">Commercial Cleaning Services</SelectItem>
                           <SelectItem value="cleaning-materials">Cleaning Materials</SelectItem>
                           <SelectItem value="multiple">Multiple Services</SelectItem>
