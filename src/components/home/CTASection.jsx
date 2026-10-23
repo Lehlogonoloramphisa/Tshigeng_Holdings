@@ -32,27 +32,25 @@ export default function CTASection() {
             </p>
 
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button
-                asChild
-                size="lg"
-                className="bg-accent px-8 py-6 text-base font-body font-semibold text-accent-foreground shadow-2xl shadow-accent/30 transition-all duration-300 hover:bg-accent/90 hover:shadow-accent/40"
-              >
-                <Link to="/contact">
-                  Request a Quote
+              <Link to="/contact">
+                <Button
+                  size="lg"
+                  className="bg-accent text-accent-foreground hover:bg-accent/90 font-body font-semibold px-8 py-6 text-base shadow-2xl shadow-accent/30 hover:shadow-accent/40 transition-all duration-300"
+                >
+                  Get Your Free Quote
                   <ArrowRight className="w-5 h-5 ml-2" />
-                </Link>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="ghost"
-                className="px-6 py-6 text-base font-body font-medium text-white hover:bg-white/10 hover:text-white"
-              >
-                <a href="tel:+27727006135">
+                </Button>
+              </Link>
+              <a href="tel:+27727006135">
+                <Button
+                  size="lg"
+                  variant="ghost"
+                  className="text-white hover:text-white hover:bg-white/10 font-body font-medium px-6 py-6 text-base"
+                >
                   <Phone className="w-5 h-5 mr-2" />
                   +27 72 700 6135
-                </a>
-              </Button>
+                </Button>
+              </a>
             </div>
           </div>
         </motion.div>

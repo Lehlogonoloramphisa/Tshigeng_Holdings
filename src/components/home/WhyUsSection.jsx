@@ -1,23 +1,22 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ClipboardCheck, CalendarDays, PhoneCall } from 'lucide-react';
+import { BadgeCheck, Building2, Home as HomeIcon } from 'lucide-react';
 import SectionHeading from '@/components/shared/SectionHeading';
 
 const commitmentBoxes = [
   {
-    icon: ClipboardCheck,
-    title: 'A clear service scope',
-    description: 'Tell us what service you need, where it is required, and which areas or products should be included.',
+    icon: HomeIcon,
+    title: 'Homes',
+    description: 'We believe every family deserves a safe, spotless and pest-free home.',
   },
   {
-    icon: CalendarDays,
-    title: 'Tailored cleaning',
-    description: 'Cleaning tasks and preferred schedules can be discussed around your premises and requirements.',
+    icon: Building2,
+    title: 'Businesses',
+    description: 'Cleaning, hygiene and pest management support can be planned around the needs and operating schedule of each business site.',
   },
   {
-    icon: PhoneCall,
-    title: 'Speak with our team',
-    description: 'Call or email Tshigeng Holdings to discuss service availability and request a quote.',
+    icon: BadgeCheck,
+    title: 'SAPCA and NCCA Registered',
   },
 ];
 
@@ -27,8 +26,8 @@ export default function WhyUsSection() {
       <div className="max-w-7xl mx-auto px-6">
         <SectionHeading
           eyebrow="Why Tshigeng"
-          title="Practical support, scoped to your needs"
-          description="Share the location, premises type, service required, and preferred timing. Tshigeng Holdings can then discuss the appropriate scope for your enquiry."
+          title="Our Service Commitment"
+          description="Tshigeng Holdings provides pest control, cleaning, hygiene and facility services for homes, businesses and institutions. Service scopes are discussed around each site's requirements and schedule."
         />
 
         <motion.div
@@ -36,7 +35,7 @@ export default function WhyUsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-30px' }}
           transition={{ duration: 0.5 }}
-          className="mx-auto grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+          className="mx-auto grid max-w-4xl grid-cols-1 gap-6 sm:grid-cols-3"
         >
           {commitmentBoxes.map((box) => {
             const Icon = box.icon;
@@ -44,7 +43,7 @@ export default function WhyUsSection() {
             return (
               <div
                 key={box.title}
-                className="flex min-h-[220px] flex-col items-center justify-center rounded-2xl border border-border bg-card p-7 text-center shadow-sm transition-shadow duration-300 hover:shadow-lg hover:shadow-primary/10"
+                className="flex min-h-[230px] flex-col items-center justify-center rounded-2xl border border-border bg-card p-6 text-center shadow-xl shadow-primary/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-primary/10"
               >
                 <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/5 text-support-green">
                   <Icon className="h-7 w-7" />
