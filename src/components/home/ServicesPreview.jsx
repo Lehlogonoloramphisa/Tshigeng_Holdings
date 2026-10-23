@@ -13,6 +13,7 @@ export default function ServicesPreview({ images }) {
       title: 'Hygiene Services',
       description: 'Hygiene equipment sales, installation, maintenance, and refill services for restrooms and shared facilities.',
       image: images.hygiene,
+      imageAlt: 'Restroom basins with wall-mounted hygiene dispensers',
       path: '/hygiene-services',
     },
     {
@@ -20,6 +21,7 @@ export default function ServicesPreview({ images }) {
       title: 'Pest Control',
       description: 'Commercial and industrial pest control for business premises and facilities.',
       image: images.pestControl,
+      imageAlt: 'Pest control technician applying treatment indoors with a hand sprayer',
       path: '/pest-control',
     },
     {
@@ -27,6 +29,7 @@ export default function ServicesPreview({ images }) {
       title: 'Commercial Cleaning Services',
       description: 'Regular and deep cleaning for homes, offices, commercial premises, and other facilities.',
       image: images.cleaning,
+      imageAlt: 'Cleaner mopping a commercial floor',
       path: '/commercial-cleaning',
     },
     {
@@ -34,6 +37,7 @@ export default function ServicesPreview({ images }) {
       title: 'Cleaning Materials & Supplies',
       description: 'Cleaning chemicals, equipment, consumables, and hygiene products for homes, offices, and commercial facilities.',
       image: images.cleaningMaterials,
+      imageAlt: 'Cleaning gloves, brushes, cloths, and spray bottles',
       path: '/cleaning-supplies',
     },
   ];

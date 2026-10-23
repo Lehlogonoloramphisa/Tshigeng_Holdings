@@ -2,15 +2,14 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Target, Eye, Heart, Shield } from 'lucide-react';
 import SectionHeading from '@/components/shared/SectionHeading';
-import { serviceImages } from '@/data/serviceImages';
 
-const TEAM_IMAGE = serviceImages.cleaningDesk;
+const TEAM_IMAGE = 'https://images.pexels.com/photos/8606292/pexels-photo-8606292.jpeg?auto=compress&cs=tinysrgb&w=1200';
 
 const values = [
   { icon: Shield, title: 'Reliability', description: 'We are reliable and always strive to keep our customers happy through consistent, professional service.' },
-  { icon: Heart, title: 'Customer Focus', description: 'We discuss the requirements, location, and preferred schedule before a service scope is agreed.' },
-  { icon: Target, title: 'Attention to Detail', description: 'Cleaning tasks are tailored to the premises and areas that need attention.' },
-  { icon: Eye, title: 'Clear Communication', description: 'We encourage customers to share their needs so availability and the next step can be confirmed.' },
+  { icon: Heart, title: 'Customer Centricity', description: 'We focus on seamless, responsive facility services that improve the user experience.' },
+  { icon: Target, title: 'Quality Delivery', description: 'We pay attention to site requirements, service standards, and the practical details that keep facilities operating well.' },
+  { icon: Eye, title: 'Sustainability', description: 'We support safe, sustainable, and forward-thinking facilities that enhance productivity while reducing environmental impact.' },
 ];
 
 export default function About() {
@@ -32,10 +31,11 @@ export default function About() {
               Our Story
             </span>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-              Tshigeng Holdings: Cleaning, Hygiene & Pest Control
+              Established in 2011 to Deliver{' '}
+              <span className="text-highlight-yellow">Facility</span> Solutions
             </h1>
             <p className="mt-6 text-lg font-body text-white/70 leading-relaxed max-w-2xl">
-              Established in 2011 and based in Irene, Centurion, Tshigeng Holdings provides commercial cleaning, hygiene services, cleaning materials, and commercial and industrial pest control.
+              Tshigeng Holdings is a South African facilities services company established in 2011, serving businesses, institutions and homes in Gauteng and across the country.
             </p>
           </motion.div>
         </div>
@@ -53,8 +53,8 @@ export default function About() {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-primary/10">
                 <img
                   src={TEAM_IMAGE}
-                  alt="Cleaner vacuuming carpet in an office"
-                  className="aspect-[4/3] w-full object-cover"
+                  alt="Clean, well maintained office interior"
+                  className="w-full h-auto object-cover"
                   loading="lazy"
                   decoding="async"
                   width="1200"
@@ -70,7 +70,7 @@ export default function About() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <span className="text-xs font-body font-semibold tracking-[0.2em] uppercase text-primary mb-4 block">
+              <span className="text-xs font-body font-semibold tracking-[0.2em] uppercase text-accent mb-4 block">
                 Who We Are
               </span>
               <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground leading-tight mb-6">
@@ -78,13 +78,13 @@ export default function About() {
               </h2>
               <div className="space-y-4 font-body text-muted-foreground leading-relaxed">
                 <p>
-                  Tshigeng Holdings CC (registration number 2011/056260/23) was established in 2011. Its services include commercial cleaning, hygiene equipment and refill services, cleaning materials, and commercial and industrial pest control.
+                  Tshigeng Holdings CC (registration number 2011/056260/23) was established in 2011. The company provides pest control, commercial cleaning, workplace hygiene solutions, and cleaning materials.
                 </p>
                 <p>
-                  The business is based at 3 Saltus Street, Galloway Estate, Irene, Centurion. It welcomes enquiries for Centurion, Pretoria, Gauteng, and other parts of South Africa; availability is confirmed for each request.
+                  The team supports service enquiries in Centurion, Pretoria and surrounding Gauteng areas, as well as work across South Africa.
                 </p>
                 <p>
-                  Cleaning and hygiene solutions are available for homes, offices, commercial premises, and other facilities. Pest control services are for commercial and industrial premises. Each enquiry can outline the location, required work, and preferred schedule.
+                  Services can be scoped for offices, industrial sites, hotels, schools, healthcare environments, hospitality venues and residential properties. Each enquiry can outline the location, required work and preferred schedule.
                 </p>
               </div>
             </motion.div>
@@ -108,13 +108,16 @@ export default function About() {
               <h3 className="font-heading text-2xl font-bold text-card-foreground mb-4">Our Mission</h3>
               <ul className="list-disc space-y-4 pl-5 font-body text-muted-foreground leading-relaxed">
                 <li>
-                  To understand each enquiry and discuss a clear service scope based on the premises and requirements.
+                  To deliver highly effective and efficient facility solutions that optimise resources, extend asset life
+                  spans, and ensure our clients run seamlessly.
                 </li>
                 <li>
-                  To tailor cleaning and hygiene tasks to the premises and the schedule requested by the customer.
+                  To partner with our clients to deliver customized, responsive facility services that elevate the user
+                  experience and support dynamic business needs.
                 </li>
                 <li>
-                  To provide clear information about the listed services and confirm availability before work is agreed.
+                  To create and maintain safe, sustainable, and forward-thinking facilities that enhance productivity
+                  while minimizing environmental impact.
                 </li>
               </ul>
             </motion.div>
@@ -132,7 +135,8 @@ export default function About() {
               <h3 className="font-heading text-2xl font-bold text-white mb-4">Our Vision</h3>
               <ul className="list-disc space-y-4 pl-5 font-body text-white/70 leading-relaxed">
                 <li>
-                  To be a helpful service partner for customers looking for cleaning, hygiene, pest control, and cleaning materials.
+                  To make every facility we manage the best place to work, visit, and thrive by delivering a seamless,
+                  customer-first experience.
                 </li>
               </ul>
             </motion.div>
