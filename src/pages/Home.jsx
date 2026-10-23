@@ -6,6 +6,7 @@ import WhyUsSection from '@/components/home/WhyUsSection';
 import OperatingHoursSection from '@/components/home/OperatingHoursSection';
 import CTASection from '@/components/home/CTASection';
 import AffiliationsSection from '@/components/home/AffiliationsSection';
+import ServiceGlimpseSection from '@/components/home/ServiceGlimpseSection';
 import { serviceImages } from '@/data/serviceImages';
 
 const IMAGES = {
@@ -29,9 +30,10 @@ export default function Home() {
           cleaningMaterials: IMAGES.cleaningMaterials,
         }}
       />
-      <AffiliationsSection />
+      <ServiceGlimpseSection />
       <WhyUsSection />
       <OperatingHoursSection />
+      <AffiliationsSection />
       <CTASection />
     </div>
   );
