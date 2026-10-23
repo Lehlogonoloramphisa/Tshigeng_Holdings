@@ -61,7 +61,7 @@ export default function HeroSection({ heroImage }) {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="mt-6 text-base md:text-lg text-white/80 font-body leading-relaxed max-w-lg"
           >
-            Tshigeng Holdings provides professional cleaning and hygiene solutions for homes, offices, commercial premises, and other facilities, together with pest control and cleaning supplies.
+            Tshigeng Holdings provides commercial and industrial pest control, as well as professional cleaning and hygiene solutions for homes, offices, commercial premises, and other facilities, plus cleaning supplies.
           </motion.p>
 
           <motion.div
