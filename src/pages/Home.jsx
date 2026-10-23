@@ -22,6 +22,7 @@ export default function Home() {
     <div>
       <HeroSection heroImage={IMAGES.hero} />
       <StatsSection />
+      <ServiceGlimpseSection />
       <ServicesPreview
         images={{
           pestControl: IMAGES.pestControl,
@@ -30,7 +31,6 @@ export default function Home() {
           cleaningMaterials: IMAGES.cleaningMaterials,
         }}
       />
-      <ServiceGlimpseSection />
       <WhyUsSection />
       <OperatingHoursSection />
       <AffiliationsSection />

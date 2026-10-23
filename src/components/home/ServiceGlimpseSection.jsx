@@ -46,6 +46,9 @@ export default function ServiceGlimpseSection() {
       </div>
 
       <div className="relative mx-auto flex h-full max-w-7xl flex-col items-center justify-center px-6 text-center text-white">
+        <span className="mb-2 font-body text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+          Our services
+        </span>
         <h2 id="service-glimpse-title" className="font-heading text-3xl font-bold leading-tight md:text-4xl">
           Pest control, cleaning &amp; hygiene
         </h2>
