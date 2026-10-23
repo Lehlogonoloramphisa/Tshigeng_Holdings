@@ -6,6 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Label } from '@/components/ui/label';
+import { businessAddresses } from '@/data/businessInfo';
 
 const contactInfo = [
   {
@@ -22,9 +23,15 @@ const contactInfo = [
   },
   {
     icon: MapPin,
-    title: 'Visit Us',
-    details: ['3 Saltus Street, Galloway Estate, Irene', 'Centurion, Gauteng, South Africa'],
-    action: 'https://www.google.com/maps?q=3+Saltus+Street+Galloway+Estate+Irene+Centurion+Gauteng+South+Africa',
+    title: businessAddresses.primary.label,
+    details: businessAddresses.primary.lines,
+    action: businessAddresses.primary.mapsUrl,
+  },
+  {
+    icon: MapPin,
+    title: businessAddresses.regional.label,
+    details: businessAddresses.regional.lines,
+    action: businessAddresses.regional.mapsUrl,
   },
   {
     icon: MapPin,
@@ -103,12 +110,13 @@ export default function Contact() {
       <section className="py-20 md:py-28 bg-background">
         <div className="max-w-7xl mx-auto px-6">
           {/* Contact info cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
             {contactInfo.map((info, index) => {
               const IconComp = info.icon;
               return (
                 <motion.div
                   key={info.title}
+                  id={info.title === businessAddresses.regional.label ? 'rustenburg-location' : undefined}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -292,7 +300,7 @@ export default function Contact() {
                     Our Location
                   </h3>
                   <p className="font-body text-sm text-white/80">
-                    3 Saltus Street, Galloway Estate, Irene, Centurion, Gauteng, South Africa
+                    {businessAddresses.primary.full}
                   </p>
                 </div>
               </div>
@@ -303,7 +311,7 @@ export default function Contact() {
                 className="w-full font-body font-semibold py-6 hover:bg-primary hover:text-primary-foreground transition-all duration-300"
               >
                 <a
-                  href="https://www.google.com/maps?q=3+Saltus+Street+Galloway+Estate+Irene+Centurion+Gauteng+South+Africa"
+                  href={businessAddresses.primary.mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                 >

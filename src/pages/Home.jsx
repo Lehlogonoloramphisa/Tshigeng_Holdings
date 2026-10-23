@@ -5,6 +5,7 @@ import ServicesPreview from '@/components/home/ServicesPreview';
 import WhyUsSection from '@/components/home/WhyUsSection';
 import OperatingHoursSection from '@/components/home/OperatingHoursSection';
 import CTASection from '@/components/home/CTASection';
+import AffiliationsSection from '@/components/home/AffiliationsSection';
 import { serviceImages } from '@/data/serviceImages';
 
 const IMAGES = {
@@ -28,6 +29,7 @@ export default function Home() {
           cleaningMaterials: IMAGES.cleaningMaterials,
         }}
       />
+      <AffiliationsSection />
       <WhyUsSection />
       <OperatingHoursSection />
       <CTASection />

@@ -6,6 +6,7 @@ import {
   serviceLandingPages,
 } from '@/data/seoLandingPages';
 import { serviceImages } from '@/data/serviceImages';
+import { businessAddresses } from '@/data/businessInfo';
 
 export const SITE_URL = 'https://www.tshigengholdings.co.za';
 export const SITE_NAME = 'Tshigeng Holdings';
@@ -61,6 +62,7 @@ const pageMeta = {
 
 const businessId = `${SITE_URL}/#business`;
 const websiteId = `${SITE_URL}/#website`;
+const regionalBusinessId = `${SITE_URL}/#rustenburg-location`;
 
 const businessSchema = {
   '@type': 'LocalBusiness',
@@ -75,7 +77,7 @@ const businessSchema = {
   foundingDate: '2011',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '3 Saltus Street, Galloway Estate, Irene',
+    streetAddress: businessAddresses.primary.lines[0],
     addressLocality: 'Centurion',
     addressRegion: 'Gauteng',
     addressCountry: 'ZA',
@@ -106,6 +108,23 @@ const businessSchema = {
       '@type': 'Offer',
       itemOffered: { '@type': 'Service', name },
     })),
+  },
+};
+
+const regionalBusinessSchema = {
+  '@type': 'LocalBusiness',
+  '@id': regionalBusinessId,
+  name: SITE_NAME,
+  legalName: 'Tshigeng Holdings CC',
+  url: `${SITE_URL}/contact#rustenburg-location`,
+  telephone: '+27727006135',
+  parentOrganization: { '@id': businessId },
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: businessAddresses.regional.lines[0],
+    addressLocality: 'Rustenburg',
+    addressRegion: 'North West Province',
+    addressCountry: 'ZA',
   },
 };
 
@@ -149,6 +168,7 @@ export function getStructuredData(pathname) {
 
   const graph = [
     businessSchema,
+    regionalBusinessSchema,
     websiteSchema,
     {
       '@type': 'WebPage',

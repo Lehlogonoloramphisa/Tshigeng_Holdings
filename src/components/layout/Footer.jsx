@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, ArrowUpRight, ChevronRight } from 'lucide-react';
+import { businessAddresses } from '@/data/businessInfo';
 
 const quickLinks = [
   { label: 'About Us', path: '/about' },
@@ -118,8 +119,17 @@ export default function Footer() {
               <li className="flex items-start gap-3 text-sm text-primary-foreground/70 font-body">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
                 <div>
-                  3 Saltus Street, Galloway Estate, Irene<br />
-                  Centurion, Gauteng, South Africa
+                  <strong className="font-semibold text-primary-foreground">{businessAddresses.primary.label}</strong><br />
+                  {businessAddresses.primary.lines[0]}<br />
+                  {businessAddresses.primary.lines[1]}
+                </div>
+              </li>
+              <li className="flex items-start gap-3 text-sm text-primary-foreground/70 font-body">
+                <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
+                <div>
+                  <strong className="font-semibold text-primary-foreground">{businessAddresses.regional.label}</strong><br />
+                  {businessAddresses.regional.lines[0]}<br />
+                  {businessAddresses.regional.lines[1]}
                 </div>
               </li>
             </ul>

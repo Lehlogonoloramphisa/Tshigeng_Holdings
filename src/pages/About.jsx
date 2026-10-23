@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Target, Eye, Heart, Shield } from 'lucide-react';
 import SectionHeading from '@/components/shared/SectionHeading';
+import { businessAddresses } from '@/data/businessInfo';
 
 const TEAM_IMAGE = 'https://images.pexels.com/photos/8606292/pexels-photo-8606292.jpeg?auto=compress&cs=tinysrgb&w=1200';
 
@@ -81,7 +82,7 @@ export default function About() {
                   Tshigeng Holdings CC (registration number 2011/056260/23) was established in 2011. The company provides pest control, commercial cleaning, workplace hygiene solutions, and cleaning materials.
                 </p>
                 <p>
-                  The team supports service enquiries in Centurion, Pretoria and surrounding Gauteng areas, as well as work across South Africa.
+                  Tshigeng Holdings’ primary address is {businessAddresses.primary.full}. Its alternative / regional address (CC) is {businessAddresses.regional.full}. The team supports service enquiries in Centurion, Pretoria, and surrounding Gauteng areas, as well as work across South Africa.
                 </p>
                 <p>
                   Services can be scoped for offices, industrial sites, hotels, schools, healthcare environments, hospitality venues and residential properties. Each enquiry can outline the location, required work and preferred schedule.
