@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Bug, Sparkles, Droplets, ArrowRight, Package } from 'lucide-react';
-import SectionHeading from '@/components/shared/SectionHeading';
 import ServiceCard from '@/components/shared/ServiceCard';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
@@ -43,14 +42,8 @@ export default function ServicesPreview({ images }) {
   ];
 
   return (
-    <section className="py-20 md:py-28 bg-background">
+    <section className="bg-background py-12 md:py-16" aria-label="Services offered">
       <div className="max-w-7xl mx-auto px-6">
-        <SectionHeading
-          eyebrow="What We Deliver"
-          title="Hygiene, Pest Control, Cleaning & Materials Supply"
-          description="We provide professional cleaning and hygiene solutions for homes, offices, commercial premises, and other facilities."
-        />
-
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-8">
           {services.map((service, index) => (
             <ServiceCard key={service.title} {...service} index={index} />
