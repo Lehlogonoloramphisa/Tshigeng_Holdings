@@ -26,6 +26,21 @@ export const serviceLandingPages = {
           alt: 'Technician using pest control equipment in an industrial facility',
           caption: 'Industrial facility treatment',
         },
+        {
+          src: serviceImages.pestControlIndoorFloor,
+          alt: 'Pest control technician spraying a treatment along an indoor tiled floor',
+          caption: 'Indoor pest treatment',
+        },
+        {
+          src: serviceImages.pestControlSprayingOutside,
+          alt: 'Pest control technician treating the exterior grounds beside a building',
+          caption: 'Exterior pest treatment',
+        },
+        {
+          src: serviceImages.herbicideTreatmentOutside,
+          alt: 'Worker applying herbicide to outdoor vegetation with a backpack sprayer',
+          caption: 'Outdoor herbicide application',
+        },
       ],
     },
     description:
@@ -241,6 +256,24 @@ export const serviceLandingPages = {
           src: serviceImages.cleaningGloves,
           alt: 'Pair of yellow rubber gloves used for cleaning',
           caption: 'Cleaning gloves',
+          fit: 'contain',
+        },
+        {
+          src: serviceImages.domestozSanitiser,
+          alt: 'Five-litre Domestoz chlorinated foaming cleaner and sanitiser container',
+          caption: 'Domestoz cleaner and sanitiser',
+          fit: 'contain',
+        },
+        {
+          src: serviceImages.papierkorbBin,
+          alt: 'Black mesh waste bin',
+          caption: 'Waste bins',
+          fit: 'contain',
+        },
+        {
+          src: serviceImages.cleaningEquipment,
+          alt: 'Commercial cleaning trolley stocked with cleaning tools and supplies',
+          caption: 'Commercial cleaning equipment',
           fit: 'contain',
         },
       ],
