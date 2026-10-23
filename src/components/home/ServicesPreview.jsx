@@ -42,8 +42,14 @@ export default function ServicesPreview({ images }) {
   ];
 
   return (
-    <section className="bg-background py-12 md:py-16" aria-label="Services offered">
+    <section className="bg-background py-12 md:py-16" aria-labelledby="services-preview-title">
       <div className="max-w-7xl mx-auto px-6">
+        <h2
+          id="services-preview-title"
+          className="mb-8 text-center font-heading text-3xl font-bold text-foreground md:text-4xl"
+        >
+          Our services
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-8">
           {services.map((service, index) => (
             <ServiceCard key={service.title} {...service} index={index} />
