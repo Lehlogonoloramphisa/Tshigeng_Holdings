@@ -61,7 +61,7 @@ export default function HeroSection({ heroImage }) {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="mt-6 text-base md:text-lg text-white/80 font-body leading-relaxed max-w-lg"
           >
-            Tshigeng Holdings provides pest control, commercial and residential cleaning, workplace hygiene, and cleaning supplies for homes and facilities in Gauteng and across South Africa.
+            Tshigeng Holdings provides professional cleaning and hygiene solutions for homes, offices, commercial premises, and other facilities, together with pest control and cleaning supplies.
           </motion.p>
 
           <motion.div

@@ -15,6 +15,9 @@ DirectoryIndex index.html
   RewriteCond %{REQUEST_URI} .+/$
   RewriteRule ^(.+)/$ https://www.tshigengholdings.co.za/$1 [R=301,L,NE]
 
+  # Redirect service pages that have been removed to the current services overview.
+  RewriteRule ^(residential-cleaning|commercial-cleaning-contracts|facility-maintenance)/?$ https://www.tshigengholdings.co.za/services [R=301,L,NE]
+
   # Keep real files and directories available, including generated route pages.
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d

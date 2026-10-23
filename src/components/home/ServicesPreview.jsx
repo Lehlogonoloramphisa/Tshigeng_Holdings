@@ -9,30 +9,30 @@ import { motion } from 'framer-motion';
 export default function ServicesPreview({ images }) {
   const services = [
     {
-      icon: Bug,
-      title: 'Pest Control',
-      description: 'Pest control for homes and businesses in Gauteng and North West Province.',
-      image: images.pestControl,
-      path: '/pest-control',
-    },
-    {
       icon: Droplets,
       title: 'Hygiene Services',
-      description: 'Supply, installation, maintenance, and servicing of hygiene equipment.',
+      description: 'Hygiene equipment sales, installation, maintenance, and refill services for restrooms and shared facilities.',
       image: images.hygiene,
       path: '/hygiene-services',
     },
     {
+      icon: Bug,
+      title: 'Pest Control',
+      description: 'Commercial and industrial pest control for business premises and facilities.',
+      image: images.pestControl,
+      path: '/pest-control',
+    },
+    {
       icon: Sparkles,
-      title: 'Commercial & Industrial Cleaning',
-      description: 'Cleaning support for homes, offices, commercial buildings and industrial sites, with once-off and recurring service enquiries.',
+      title: 'Commercial Cleaning Services',
+      description: 'Regular and deep cleaning for homes, offices, commercial premises, and other facilities.',
       image: images.cleaning,
       path: '/commercial-cleaning',
     },
     {
       icon: Package,
       title: 'Cleaning Materials & Supplies',
-      description: 'Cleaning chemicals, equipment, consumables and hygiene supplies for workplaces and facility teams.',
+      description: 'Cleaning chemicals, equipment, consumables, and hygiene products for homes, offices, and commercial facilities.',
       image: images.cleaningMaterials,
       path: '/cleaning-supplies',
     },
@@ -44,7 +44,7 @@ export default function ServicesPreview({ images }) {
         <SectionHeading
           eyebrow="What We Deliver"
           title="Hygiene, Pest Control, Cleaning & Materials Supply"
-          description="Our work is structured around the practical needs of facilities, institutions, businesses, and public sector teams across South Africa."
+          description="We provide professional cleaning and hygiene solutions for homes, offices, commercial premises, and other facilities."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-8">

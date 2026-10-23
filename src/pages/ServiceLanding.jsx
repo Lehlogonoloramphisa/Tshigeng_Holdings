@@ -5,6 +5,86 @@ import { ArrowRight, CheckCircle2, HelpCircle, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import SectionHeading from '@/components/shared/SectionHeading';
 
+function ContentSections({ sections = [] }) {
+  return sections.map((section, index) => {
+    const imageOnLeft = index % 2 === 1;
+    return (
+      <section key={section.title} className="bg-background py-16 md:py-20">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 lg:grid-cols-2 lg:gap-16">
+          {section.image && (
+            <div className={`overflow-hidden rounded-2xl shadow-xl shadow-primary/10 ${imageOnLeft ? 'lg:order-1' : 'lg:order-2'}`}>
+              <img
+                src={section.image}
+                alt={section.imageAlt}
+                className="h-72 w-full object-cover md:h-[26rem]"
+                loading="lazy"
+                decoding="async"
+                width="1200"
+                height="800"
+              />
+            </div>
+          )}
+          <div className={imageOnLeft ? 'lg:order-2' : 'lg:order-1'}>
+            <span className="mb-3 block font-body text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+              {section.eyebrow || 'Our Services'}
+            </span>
+            <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
+              {section.title}
+            </h2>
+            {section.description && (
+              <p className="mt-5 font-body leading-relaxed text-muted-foreground">
+                {section.description}
+              </p>
+            )}
+            {section.items && (
+              <ul className="mt-6 space-y-3">
+                {section.items.map((item) => (
+                  <li key={item} className="flex items-start gap-3 font-body leading-relaxed text-foreground">
+                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-support-green" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+            {section.groups && (
+              <div className="mt-6 space-y-6">
+                {section.groups.map((group) => (
+                  <div key={group.title}>
+                    <h3 className="font-heading text-xl font-semibold text-foreground">
+                      {group.title}
+                    </h3>
+                    <ul className="mt-3 space-y-2">
+                      {group.items.map((item) => (
+                        <li key={item} className="flex items-start gap-3 font-body leading-relaxed text-muted-foreground">
+                          <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-support-green" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            )}
+            {section.closing && (
+              <p className="mt-6 font-body leading-relaxed text-muted-foreground">
+                {section.closing}
+              </p>
+            )}
+            {section.callToAction && (
+              <Link to="/contact" className="mt-7 inline-flex">
+                <Button className="bg-primary font-body font-semibold text-primary-foreground hover:bg-primary/90">
+                  Request a Quote
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+            )}
+          </div>
+        </div>
+      </section>
+    );
+  });
+}
+
 export default function ServiceLanding({ page }) {
   return (
     <div>
@@ -109,6 +189,8 @@ export default function ServiceLanding({ page }) {
           </motion.div>
         </div>
       </section>
+
+      <ContentSections sections={page.contentSections} />
 
       <section className="bg-muted/50 py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-6">

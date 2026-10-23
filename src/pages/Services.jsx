@@ -1,24 +1,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Bug, Building2, Sparkles, Droplets, CheckCircle2, ArrowRight, Home as HomeIcon, ClipboardList, Wrench } from 'lucide-react';
+import { Bug, Building2, Sparkles, Droplets, CheckCircle2, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-
-const IMAGES = {
-  pestControl: 'https://images.pexels.com/photos/4099466/pexels-photo-4099466.jpeg?auto=compress&cs=tinysrgb&w=1200',
-  hygiene: 'https://images.pexels.com/photos/5938598/pexels-photo-5938598.jpeg?auto=compress&cs=tinysrgb&w=1200',
-  facilityMgmt: 'https://images.pexels.com/photos/5668879/pexels-photo-5668879.jpeg?auto=compress&cs=tinysrgb&w=1200',
-  cleaning: 'https://images.pexels.com/photos/11137247/pexels-photo-11137247.jpeg?auto=compress&cs=tinysrgb&w=1200',
-  cleaningMaterials: 'https://images.pexels.com/photos/3177257/pexels-photo-3177257.jpeg?auto=compress&cs=tinysrgb&w=1200',
-};
+import { serviceImages } from '@/data/serviceImages';
 
 const services = [
   {
     icon: Droplets,
     title: 'Hygiene Services',
-    description: 'We supply, install, maintain, and service soap dispensers, air hand dryers, ladies sanitary bins, toilet seat wipes, paper towel dispensers, and air fresheners, and provide chemical deep cleaning.',
-    features: ['Soap Dispensers', 'Air Hand Dryers', 'Ladies Sanitary Bins', 'Toilet Seat Wipes', 'Paper Towel Dispensers', 'Air Fresheners', 'Chemical Deep Cleaning'],
-    image: IMAGES.hygiene,
+    description: 'Hygiene equipment sales, installation, maintenance, and refill services for restrooms and shared facilities.',
+    features: ['Soap Dispensers', 'Paper Towel Dispensers', 'Hand Sanitiser Stations', 'Sanitary Bins', 'Air Hand Dryers', 'Toilet Seat Wipes and Air Fresheners', 'Hygiene Refills'],
+    image: serviceImages.hygieneWashroom,
+    imageAlt: 'Clean public washroom with a row of sinks',
     path: '/hygiene-services',
   },
   {
@@ -26,48 +20,27 @@ const services = [
     title: 'Pest Control',
     description: 'Commercial and industrial pest control for business premises, factories, warehouses, and managed facilities.',
     features: ['Commercial Pest Control', 'Industrial Pest Control', 'Site Support', 'Pest Control Contracts'],
-    image: IMAGES.pestControl,
+    image: serviceImages.pestControl,
+    imageAlt: 'Pest control technician treating an indoor space',
     path: '/pest-control',
   },
   {
     icon: Sparkles,
-    title: 'Commercial & Industrial Cleaning',
-    description: 'Commercial and industrial cleaning for offices, facilities, and managed buildings, including high-rise cleaning and industrial duct cleaning.',
-    features: ['Commercial cleaning', 'Industrial cleaning', 'High-rise cleaning', 'Industrial duct cleaning'],
-    image: IMAGES.cleaning,
+    title: 'Commercial Cleaning Services',
+    description: 'Regular and deep commercial cleaning for offices, homes, commercial premises, and other facilities, tailored to your requirements and schedule.',
+    features: ['Regular Cleaning', 'Deep Cleaning', 'Kitchen and Bathroom Deep Cleaning', 'Floor Care'],
+    image: serviceImages.commercialCleaning,
+    imageAlt: 'Cleaner maintaining the floor of a commercial shopping centre',
     path: '/commercial-cleaning',
   },
   {
-    icon: HomeIcon,
-    title: 'Residential Cleaning',
-    description: 'Once-off and recurring home cleaning enquiries for Centurion, Pretoria, and surrounding Gauteng areas.',
-    features: ['Routine home cleaning', 'Kitchen and bathroom cleaning', 'Once-off cleaning enquiries'],
-    image: IMAGES.cleaning,
-    path: '/residential-cleaning',
-  },
-  {
-    icon: ClipboardList,
-    title: 'Commercial Cleaning Contracts',
-    description: 'Recurring cleaning arrangements scoped around the building, service schedule, access times, and facility needs.',
-    features: ['Site scope discussion', 'Agreed service frequency', 'Cleaning materials coordination'],
-    image: IMAGES.cleaning,
-    path: '/commercial-cleaning-contracts',
-  },
-  {
     icon: Building2,
-    title: 'Cleaning Materials',
-    description: 'Supply of cleaning equipment, chemicals, and consumables for facilities that need dependable products and responsive procurement support.',
+    title: 'Cleaning Materials & Supplies',
+    description: 'Cleaning equipment, chemicals, hygiene products, and consumables for homes, offices, and commercial facilities.',
     features: ['Cleaning Equipment', 'Cleaning Chemicals', 'Consumables', 'Supply Coordination'],
-    image: IMAGES.cleaningMaterials,
+    image: serviceImages.cleaningSupplies,
+    imageAlt: 'Cleaning products and tools ready for use',
     path: '/cleaning-supplies',
-  },
-  {
-    icon: Wrench,
-    title: 'Facility Maintenance',
-    description: 'Routine facility support and maintenance coordination for businesses, institutions, and managed properties.',
-    features: ['Facility support planning', 'Site checks and issue reporting', 'Integrated cleaning and hygiene support'],
-    image: IMAGES.facilityMgmt,
-    path: '/facility-maintenance',
   },
 ];
 
@@ -89,11 +62,10 @@ export default function Services() {
               Our Capabilities
             </span>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-              Pest Control,{' '}
-              <span className="text-highlight-yellow">Cleaning</span>, & Hygiene Services
+              Cleaning, Hygiene & Pest Control Services
             </h1>
             <p className="mt-6 text-lg font-body text-white/70 leading-relaxed max-w-2xl">
-              We deliver pest control, commercial and residential cleaning, workplace hygiene, cleaning supplies, contract cleaning, and facility support for clients across South Africa.
+              We provide professional cleaning and hygiene solutions for homes, offices, commercial premises, and other facilities, together with pest control and cleaning materials.
             </p>
           </motion.div>
         </div>
@@ -117,7 +89,7 @@ export default function Services() {
                   <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-primary/10">
                     <img
                       src={service.image}
-                      alt={service.title}
+                      alt={service.imageAlt}
                       className="w-full h-72 md:h-96 object-cover"
                       loading="lazy"
                       decoding="async"

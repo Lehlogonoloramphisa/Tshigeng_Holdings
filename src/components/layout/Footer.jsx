@@ -10,12 +10,9 @@ const quickLinks = [
 
 const serviceLinks = [
   { label: 'Pest Control', path: '/pest-control' },
-  { label: 'Commercial Cleaning', path: '/commercial-cleaning' },
-  { label: 'Residential Cleaning', path: '/residential-cleaning' },
-  { label: 'Cleaning Contracts', path: '/commercial-cleaning-contracts' },
+  { label: 'Commercial Cleaning Services', path: '/commercial-cleaning' },
   { label: 'Hygiene Services', path: '/hygiene-services' },
   { label: 'Cleaning Supplies', path: '/cleaning-supplies' },
-  { label: 'Facility Maintenance', path: '/facility-maintenance' },
 ];
 
 const legalLinks = [
@@ -59,7 +56,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-sm text-primary-foreground/70 font-body leading-relaxed">
-              Established in 2011, Tshigeng Holdings provides pest control, commercial and residential cleaning, workplace hygiene, cleaning supplies, and facility support in Gauteng and across South Africa.
+              Established in 2011, Tshigeng Holdings provides pest control, commercial cleaning, hygiene solutions, and cleaning supplies in Gauteng and across South Africa.
             </p>
           </div>
 

@@ -15,7 +15,7 @@ const pageMeta = {
   '/': {
     title: 'Tshigeng Holdings | Cleaning & Pest Control in Centurion',
     description:
-      'Tshigeng Holdings provides pest control, commercial and residential cleaning, hygiene services and cleaning supplies in Centurion, Pretoria and across Gauteng.',
+      'Tshigeng Holdings provides commercial cleaning, hygiene services, pest control, and cleaning supplies in Centurion, Pretoria, and Gauteng.',
   },
   '/about': {
     title: 'About Tshigeng Holdings | Facilities Services in Gauteng',
@@ -23,14 +23,14 @@ const pageMeta = {
       'Learn about Tshigeng Holdings, a South African facilities services company established in 2011, serving homes and organisations with cleaning, hygiene and pest control.',
   },
   '/services': {
-    title: 'Pest Control, Cleaning & Hygiene Services | Tshigeng Holdings',
+    title: 'Commercial Cleaning, Hygiene & Pest Control | Tshigeng Holdings',
     description:
-      'Explore pest management, commercial and residential cleaning, washroom hygiene, cleaning supplies, contract cleaning and facility maintenance from Tshigeng Holdings.',
+      'Explore commercial cleaning, deep cleaning, hygiene equipment and refills, pest control, and cleaning supplies from Tshigeng Holdings.',
   },
   '/contact': {
     title: 'Contact Tshigeng Holdings | Request a Service Quote',
     description:
-      'Contact Tshigeng Holdings for cleaning, pest control, hygiene, supplies or facility maintenance. Call +27 72 700 6135 or request a quote online.',
+      'Contact Tshigeng Holdings for commercial cleaning, pest control, hygiene equipment, refills, or cleaning supplies. Call +27 72 700 6135 or request a quote online.',
   },
   '/privacy-policy': {
     title: 'Privacy Policy | Tshigeng Holdings',
@@ -98,15 +98,14 @@ const businessSchema = {
   },
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
-    name: 'Cleaning, hygiene and facility services',
+    name: 'Cleaning, hygiene and pest control services',
     itemListElement: [
       'Pest control',
       'Commercial cleaning',
-      'Residential cleaning',
+      'Deep cleaning',
       'Washroom hygiene and sanitation',
       'Cleaning supplies and materials',
-      'Commercial cleaning contracts',
-      'Facility maintenance',
+      'Hygiene equipment installation and refills',
     ].map((name) => ({
       '@type': 'Offer',
       itemOffered: { '@type': 'Service', name },

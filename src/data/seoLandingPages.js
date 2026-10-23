@@ -1,3 +1,5 @@
+import { serviceImages } from './serviceImages';
+
 export const serviceLandingPages = {
   '/pest-control': {
     eyebrow: 'Pest Control Service',
@@ -58,68 +60,57 @@ export const serviceLandingPages = {
     },
   },
   '/cleaning-services': {
-    eyebrow: 'Cleaning Service',
-    title: 'Professional Cleaning Services',
-    highlight: 'Cleaning',
+    eyebrow: 'Cleaning & Hygiene Solutions',
+    title: 'Cleaning & Hygiene Solutions',
+    highlight: 'Cleaning and Hygiene',
     description:
-      'Commercial and industrial cleaning, including high-rise and industrial duct cleaning, plus residential, office, school, healthcare, retail, and post-construction cleaning for facility support.',
-    introTitle: 'Cleaning support for workplaces and homes',
+      'Professional cleaning and hygiene solutions for homes, offices, commercial premises, and other facilities in Centurion, Pretoria, and Gauteng.',
+    introTitle: 'Cleaning and hygiene for your premises',
     intro:
-      'Tshigeng Holdings provides cleaning services for facilities that need dependable teams, clear scopes, and consistent results. Services can be shaped around once-off cleaning, regular cleaning schedules, and high-need environments.',
+      'At Tshigeng Holdings, we provide professional cleaning and hygiene solutions tailored to the needs of homes, offices, commercial premises, and other facilities. Our services focus on cleanliness, comfort, and maintaining hygienic environments through reliable service and attention to detail.',
     searchFocus: [
       'Commercial cleaning',
       'Office cleaning',
-      'Residential cleaning',
+      'Regular cleaning services',
       'Deep cleaning services',
-      'Industrial cleaning',
-      'High-rise cleaning',
-      'Industrial duct cleaning',
-      'Post construction cleaning',
+      'Hygiene equipment installation',
+      'Hygiene refill services',
     ],
     services: [
-      'Office cleaning',
+      'Regular cleaning',
+      'Deep cleaning',
       'Commercial cleaning',
-      'Residential cleaning',
-      'Industrial cleaning',
-      'High-rise cleaning',
-      'Industrial duct cleaning',
-      'Move in and move out cleaning',
-      'Warehouse cleaning',
-      'School cleaning',
-      'Retail cleaning',
+      'Hygiene equipment installation',
+      'Hygiene refill services',
     ],
-    industries: ['Offices', 'Homes', 'Schools', 'Hospitals', 'Shopping centres', 'Warehouses', 'Commercial buildings'],
+    industries: ['Homes', 'Offices', 'Commercial premises', 'Schools', 'Healthcare facilities', 'Retail spaces'],
     faqs: [
       {
-        question: 'Do you offer commercial cleaning contracts?',
+        question: 'What types of cleaning do you provide?',
         answer:
-          'Yes. Tshigeng Holdings can support regular commercial cleaning needs for offices, retail spaces, schools, healthcare environments, and other facilities.',
+          'Tshigeng Holdings provides regular and deep cleaning for homes, offices, commercial premises, and other facilities. The work can be tailored to your requirements and schedule.',
       },
       {
-        question: 'Can you help with once-off deep cleaning?',
+        question: 'Do you provide hygiene equipment and refills?',
         answer:
-          'Yes. Once-off deep cleaning can be discussed based on the property size, cleaning scope, access, and required turnaround time.',
+          'Yes. Hygiene equipment supply, installation, maintenance, and refill services can be arranged for restrooms and shared facilities.',
       },
       {
-        question: 'Do you provide residential cleaning?',
+        question: 'How do I request a cleaning or hygiene quote?',
         answer:
-          'Yes. Tshigeng Holdings supports homes with cleaning services based on the client requirement and available schedule.',
+          'Contact Tshigeng Holdings with your location, facility type, and service requirements to discuss a suitable scope and schedule.',
       },
     ],
     relatedLinks: [
       { label: 'Commercial Cleaning', path: '/commercial-cleaning' },
-      { label: 'Residential Cleaning', path: '/residential-cleaning' },
-      { label: 'Commercial Cleaning Contracts', path: '/commercial-cleaning-contracts' },
       { label: 'Cleaning Services Pretoria', path: '/cleaning-services-pretoria' },
-      { label: 'Cleaning and Hygiene Services', path: '/hygiene-services' },
+      { label: 'Hygiene Services', path: '/hygiene-services' },
       { label: 'Cleaning Supplies', path: '/cleaning-supplies' },
     ],
     seo: {
-      title: 'Professional Cleaning Services | Tshigeng Holdings',
+      title: 'Cleaning & Hygiene Solutions | Tshigeng Holdings',
       description:
-        'Tshigeng Holdings provides commercial and industrial cleaning, including high-rise and industrial duct cleaning, plus office and residential cleaning across South Africa.',
-      keywords:
-        'cleaning services, cleaning company near me, commercial cleaning, office cleaning, residential cleaning, industrial cleaning, deep cleaning services, post construction cleaning',
+        'Cleaning and hygiene solutions for homes, offices and commercial premises in Centurion, Pretoria and Gauteng. Ask Tshigeng Holdings about regular or deep cleaning.',
     },
   },
   '/hygiene-services': {
@@ -127,35 +118,69 @@ export const serviceLandingPages = {
     title: 'Hygiene and Sanitation Services',
     highlight: 'Hygiene',
     description:
-      'Supply, installation, maintenance, and servicing of soap dispensers, air hand dryers, ladies sanitary bins, toilet seat wipes, paper towel dispensers, air fresheners, and chemical deep cleaning for business facilities.',
+      'Hygiene equipment sales, installation, maintenance, and refill services for restrooms and shared facilities in Centurion, Pretoria, and Gauteng.',
     introTitle: 'Washroom hygiene and workplace care',
     intro:
-      'Tshigeng Holdings supplies, installs, maintains, and services soap dispensers, air hand dryers, ladies sanitary bins, toilet seat wipes, paper towel dispensers, and air fresheners. Hygiene support also includes chemical deep cleaning for business facilities.',
+      'Tshigeng Holdings supplies and installs hygiene equipment designed to support clean, well-maintained restrooms and shared facilities. Our team also assists with equipment maintenance and replenishes essential consumables.',
     searchFocus: [
       'Hygiene services',
       'Washroom hygiene',
-      'Sanitary bin services',
-      'Air freshener services',
-      'Soap dispenser installation',
-      'Air hand dryers',
-      'Paper towel dispensers',
-      'Toilet seat wipes',
+      'Hygiene equipment sales and installation',
+      'Soap dispenser refills',
+      'Hand sanitiser refills',
+      'Sanitary bins',
     ],
     services: [
-      'Soap dispenser supply, installation, maintenance, and servicing',
-      'Air hand dryer supply, installation, maintenance, and servicing',
-      'Ladies sanitary bin supply and servicing',
-      'Toilet seat wipes',
+      'Soap dispensers',
       'Paper towel dispensers',
-      'Air freshener supply and servicing',
-      'Chemical deep cleaning',
+      'Hand sanitiser stations',
+      'Sanitary bins',
+      'Air hand dryers',
+      'Toilet seat wipes and air fresheners',
+      'Hygiene equipment maintenance',
+      'Liquid soap and hand sanitiser refills',
+      'Dispenser consumables',
+    ],
+    contentSections: [
+      {
+        eyebrow: 'Equipment for shared facilities',
+        title: 'Hygiene Equipment Sales & Installation',
+        description:
+          'A hygienic environment requires the right equipment. Tshigeng Holdings supplies and installs hygiene equipment designed to support clean, well-maintained restrooms and shared facilities. Our solutions include:',
+        items: [
+          'Soap dispensers',
+          'Paper towel dispensers',
+          'Hand sanitiser stations',
+          'Sanitary bins',
+          'Air hand dryers, toilet seat wipes, air fresheners, and other essential hygiene equipment',
+        ],
+        closing:
+          'Our team also assists with equipment maintenance to support reliable operation and consistent hygiene standards.',
+        image: serviceImages.hygieneWashroom,
+        imageAlt: 'Clean public washroom with a row of sinks',
+      },
+      {
+        eyebrow: 'Keep hygiene stations stocked',
+        title: 'Hygiene Refill Services',
+        description:
+          'Keep your hygiene facilities stocked and ready for use with convenient refill services. We replenish essential consumables to help prevent shortages and maintain a clean, professional environment. Our refill services include:',
+        items: [
+          'Liquid soap refills',
+          'Hand sanitiser refills',
+          'Dispenser consumables and other essential hygiene supplies',
+        ],
+        closing:
+          'From offices and commercial buildings to high-traffic facilities, we help you maintain well-stocked hygiene stations for employees, visitors, and customers.',
+        image: serviceImages.hygieneRefills,
+        imageAlt: 'Five-litre bathroom hygiene cleaner supplied for facility care',
+      },
     ],
     industries: ['Offices', 'Schools', 'Healthcare facilities', 'Retail spaces', 'Hospitality venues', 'Commercial buildings'],
     faqs: [
       {
         question: 'What hygiene products do you supply?',
         answer:
-          'Tshigeng Holdings supplies soap dispensers, air hand dryers, ladies sanitary bins, toilet seat wipes, paper towel dispensers, and air fresheners. The team can also install, maintain, and service hygiene equipment and provide chemical deep cleaning.',
+          'Tshigeng Holdings supplies and installs soap dispensers, paper towel dispensers, hand sanitiser stations, sanitary bins, and other essential hygiene equipment. Air hand dryers, toilet seat wipes, and air fresheners are also available.',
       },
       {
         question: 'Do you service hygiene equipment regularly?',
@@ -176,7 +201,7 @@ export const serviceLandingPages = {
     seo: {
       title: 'Hygiene & Sanitation Services in Gauteng | Tshigeng Holdings',
       description:
-        'Tshigeng Holdings supplies, installs, maintains, and services soap dispensers, air hand dryers, ladies sanitary bins, toilet seat wipes, paper towel dispensers, and air fresheners, plus chemical deep cleaning.',
+        'Tshigeng Holdings supplies and installs hygiene equipment and provides maintenance and refill services for offices and commercial facilities in Gauteng.',
       keywords:
         'hygiene services, washroom hygiene, sanitary bin services, air freshener services, hand sanitiser stations, soap dispenser installation, hygiene product supplier',
     },
@@ -189,7 +214,7 @@ export const serviceLandingPages = {
       'Cleaning chemicals, janitorial supplies, hygiene supplies, consumables, equipment, PPE, and facility supplies for operational teams.',
     introTitle: 'Cleaning materials for facilities that need dependable supply',
     intro:
-      'Tshigeng Holdings supplies cleaning materials and facility consumables that support commercial, industrial, residential, and institutional cleaning operations.',
+      'Tshigeng Holdings supplies cleaning materials and facility consumables for homes, offices, commercial premises, and institutional cleaning teams.',
     searchFocus: [
       'Cleaning supplies',
       'Hygiene supplies',
@@ -206,9 +231,9 @@ export const serviceLandingPages = {
       'Hand soap supply',
       'Washroom consumables',
       'PPE and safety equipment',
-      'Industrial cleaning products',
+      'Commercial cleaning products',
     ],
-    industries: ['Facilities teams', 'Offices', 'Schools', 'Retail sites', 'Industrial sites', 'Hospitality venues'],
+    industries: ['Facilities teams', 'Offices', 'Schools', 'Retail sites', 'Commercial premises', 'Hospitality venues'],
     faqs: [
       {
         question: 'Do you supply cleaning chemicals?',
@@ -240,17 +265,89 @@ export const serviceLandingPages = {
     },
   },
   '/commercial-cleaning': {
-    eyebrow: 'Commercial Cleaning',
+    eyebrow: 'Commercial Cleaning Services',
     title: 'Commercial Cleaning Services',
     highlight: 'Commercial Cleaning',
     description:
-      'Commercial and industrial cleaning in Gauteng, including high-rise cleaning and industrial duct cleaning for workplaces, facilities, and managed buildings.',
-    introTitle: 'Reliable cleaning for busy workplaces',
+      'Regular and deep commercial cleaning for offices, homes, commercial premises, and other facilities in Centurion, Pretoria, and Gauteng.',
+    introTitle: 'Cleaning & Hygiene Solutions',
     intro:
-      'Tshigeng Holdings provides commercial and industrial cleaning with scopes shaped around the building, access, operating hours, and level of use. Services include routine workplace cleaning, high-rise cleaning, and industrial duct cleaning, as well as periodic deep cleaning and shared-area cleaning.',
-    searchFocus: ['Commercial cleaning', 'Industrial cleaning', 'High-rise cleaning', 'Industrial duct cleaning', 'Office cleaning', 'Workplace cleaning schedules'],
-    services: ['Commercial and industrial cleaning', 'High-rise cleaning', 'Industrial duct cleaning', 'Office and reception cleaning', 'Floor and surface cleaning', 'Washroom cleaning', 'Kitchen and shared-area cleaning', 'Periodic deep cleaning'],
-    industries: ['Offices', 'Retail sites', 'Schools', 'Healthcare facilities', 'Warehouses', 'Commercial buildings'],
+      'At Tshigeng Holdings, we provide professional cleaning and hygiene solutions tailored to the needs of homes, offices, commercial premises, and other facilities. Our services focus on cleanliness, comfort, and maintaining hygienic environments through reliable service and attention to detail.',
+    searchFocus: ['Commercial cleaning services', 'Regular cleaning services', 'Deep cleaning services', 'Office cleaning', 'Kitchen deep cleaning', 'Bathroom deep cleaning', 'Floor care'],
+    services: ['Regular cleaning', 'Deep cleaning', 'Commercial cleaning', 'Floor care', 'Kitchen and bathroom cleaning'],
+    contentSections: [
+      {
+        eyebrow: 'Everyday care for your premises',
+        title: 'Regular Cleaning Services',
+        description:
+          'Keep your premises clean, fresh, and presentable with regular cleaning services. Our team handles essential cleaning tasks to maintain a comfortable and hygienic environment. Our regular cleaning services include:',
+        items: [
+          'Vacuuming carpets and floors.',
+          'Mopping hard floors and other suitable surfaces.',
+          'Dusting furniture, fixtures, and surfaces.',
+          'Cleaning appliances, countertops, and work surfaces.',
+          'Emptying waste bins and disposing of rubbish appropriately.',
+        ],
+        closing:
+          'Whether you need routine office cleaning or ongoing domestic cleaning, we tailor our services to your requirements and schedule.',
+        image: serviceImages.commercialCleaning,
+        imageAlt: 'Cleaner maintaining the floor of a commercial shopping centre',
+      },
+      {
+        eyebrow: 'Extra attention where it is needed',
+        title: 'Deep Cleaning Services',
+        description:
+          'Our deep cleaning services target built-up dirt, stubborn stains, grease, and hard-to-reach areas. We go beyond everyday cleaning to help restore cleanliness in areas requiring extra attention.',
+        groups: [
+          {
+            title: 'Kitchen Deep Cleaning',
+            items: [
+              'Degreasing splashbacks and kitchen surfaces.',
+              'Cleaning ovens, microwaves, and refrigerators.',
+              'Scrubbing floors and removing built-up dirt.',
+            ],
+          },
+          {
+            title: 'Bathroom Deep Cleaning',
+            items: [
+              'Cleaning and disinfecting toilets, showers, and bathtubs.',
+              'Removing soap scum and hard water stains.',
+              'Cleaning behind fixtures and around hard-to-reach areas.',
+            ],
+          },
+          {
+            title: 'Floor Care',
+            items: [
+              'Deep cleaning carpets.',
+              'Scrubbing tiles and grout.',
+              'Cleaning and polishing suitable hardwood floors.',
+            ],
+          },
+          {
+            title: 'Additional Cleaning',
+            items: [
+              'Cleaning skirting boards, blinds, and light fixtures.',
+              'Removing cobwebs.',
+              'Cleaning neglected corners and other overlooked areas.',
+            ],
+          },
+        ],
+        closing:
+          'We recommend scheduling deep cleaning quarterly or twice a year, depending on the condition, usage, and specific requirements of your premises.',
+        image: serviceImages.floorCleaning,
+        imageAlt: 'Cleaning professional deep-cleaning a floor with a floor machine',
+      },
+      {
+        eyebrow: 'Tshigeng Holdings',
+        title: 'Your Trusted Cleaning & Hygiene Partner',
+        description:
+          'Choose Tshigeng Holdings for cleaning and hygiene solutions tailored to your facility, schedule, and operational needs. We are committed to helping you maintain clean, comfortable, and hygienic spaces.',
+        image: serviceImages.hygieneWashroom,
+        imageAlt: 'Clean restroom facilities prepared for staff and visitors',
+        callToAction: true,
+      },
+    ],
+    industries: ['Homes', 'Offices', 'Commercial premises', 'Schools', 'Healthcare facilities', 'Retail spaces'],
     faqs: [
       {
         question: 'Can commercial cleaning be scheduled outside business hours?',
@@ -263,13 +360,14 @@ export const serviceLandingPages = {
           'Yes. A cleaning scope can include work areas and shared spaces such as reception areas, kitchens and washrooms, based on the site requirements.',
       },
       {
-        question: 'Do you offer ongoing workplace cleaning?',
+        question: 'How often should deep cleaning be scheduled?',
         answer:
-          'Yes. Contact Tshigeng Holdings to discuss a recurring cleaning schedule or a commercial cleaning contract for your site.',
+          'Deep cleaning can be scheduled quarterly or twice a year, depending on the condition, usage, and specific requirements of your premises.',
       },
     ],
     relatedLinks: [
-      { label: 'Commercial Cleaning Contracts', path: '/commercial-cleaning-contracts' },
+      { label: 'Cleaning & Hygiene Solutions', path: '/cleaning-services' },
+      { label: 'Hygiene Equipment and Refills', path: '/hygiene-services' },
       { label: 'Cleaning Services in Pretoria', path: '/cleaning-services-pretoria' },
       { label: 'Cleaning Supplies', path: '/cleaning-supplies' },
       { label: 'Request a Quote', path: '/contact' },
@@ -277,130 +375,7 @@ export const serviceLandingPages = {
     seo: {
       title: 'Commercial Cleaning Services in Gauteng | Tshigeng Holdings',
       description:
-        'Arrange commercial and industrial cleaning in Gauteng, including high-rise and industrial duct cleaning, with Tshigeng Holdings.',
-    },
-  },
-  '/residential-cleaning': {
-    eyebrow: 'Residential Cleaning',
-    title: 'Residential Cleaning Services',
-    highlight: 'Residential Cleaning',
-    description:
-      'Cleaning support for homes in Centurion, Pretoria and surrounding Gauteng areas, with scopes and schedules discussed around each household.',
-    introTitle: 'Cleaning support shaped around your home',
-    intro:
-      'Tshigeng Holdings provides residential cleaning enquiries for homes that need a once-off clean or a regular schedule. Tell us about the property, rooms, priorities and timing so the scope can be discussed before a quote is prepared.',
-    searchFocus: ['Home cleaning', 'Residential cleaning', 'Once-off cleaning', 'Regular household cleaning', 'Deep cleaning enquiries'],
-    services: ['Routine home cleaning', 'Kitchen and bathroom cleaning', 'Dusting and surface care', 'Floor cleaning', 'Move-in and move-out cleaning enquiries', 'Once-off cleaning enquiries'],
-    industries: ['Homes', 'Apartments', 'Townhouses', 'Residential estates'],
-    faqs: [
-      {
-        question: 'Do you provide residential cleaning in Centurion?',
-        answer:
-          'Tshigeng Holdings accepts residential cleaning enquiries in Centurion, Pretoria and nearby Gauteng areas. Contact the team to confirm availability for your address.',
-      },
-      {
-        question: 'Can I request a once-off clean or regular visits?',
-        answer:
-          'Both once-off and recurring cleaning needs can be discussed. The available schedule and scope depend on the property and service area.',
-      },
-      {
-        question: 'How do I request a home cleaning quote?',
-        answer:
-          'Share your location, the type of home, the areas to be cleaned and your preferred timing through the contact page or by phone.',
-      },
-    ],
-    relatedLinks: [
-      { label: 'Cleaning Services', path: '/cleaning-services' },
-      { label: 'Cleaning Services in Pretoria', path: '/cleaning-services-pretoria' },
-      { label: 'Commercial Cleaning', path: '/commercial-cleaning' },
-      { label: 'Request a Quote', path: '/contact' },
-    ],
-    seo: {
-      title: 'Residential Cleaning in Centurion & Pretoria | Tshigeng',
-      description:
-        'Request residential cleaning in Centurion, Pretoria or nearby Gauteng areas. Discuss once-off or recurring home cleaning with Tshigeng Holdings.',
-    },
-  },
-  '/commercial-cleaning-contracts': {
-    eyebrow: 'Business Cleaning Contracts',
-    title: 'Commercial Cleaning Contracts',
-    highlight: 'Cleaning Contracts',
-    description:
-      'Recurring cleaning arrangements for businesses that need a clear site scope, agreed schedule and dependable facility support.',
-    introTitle: 'A consistent cleaning plan for your business',
-    intro:
-      'Tshigeng Holdings works with businesses to discuss contract cleaning requirements before work begins. Planning can cover the facility areas, visit frequency, access times, consumables and the reporting or review process that suits the site.',
-    searchFocus: ['Business cleaning contracts', 'Contract cleaning services', 'Office cleaning contracts', 'Recurring commercial cleaning', 'Facility cleaning schedules'],
-    services: ['Site walk-through and cleaning scope discussion', 'Routine office and workplace cleaning', 'Agreed service frequency', 'Washroom and shared-area cleaning', 'Cleaning materials coordination', 'Schedule and scope review'],
-    industries: ['Office buildings', 'Retail and shopping sites', 'Schools', 'Healthcare environments', 'Warehouses', 'Managed facilities'],
-    faqs: [
-      {
-        question: 'What information is needed for a cleaning contract quote?',
-        answer:
-          'Share the site location, building type, approximate size, areas to be cleaned, preferred frequency and access times. A site discussion may help define the scope.',
-      },
-      {
-        question: 'Can the cleaning schedule fit our operating hours?',
-        answer:
-          'The preferred schedule can be discussed during scoping, subject to site access and service availability.',
-      },
-      {
-        question: 'Can cleaning supplies be included in the contract?',
-        answer:
-          'Cleaning materials and consumables can be discussed alongside the service scope so the requirements are clear in the quote.',
-      },
-    ],
-    relatedLinks: [
-      { label: 'Commercial Cleaning', path: '/commercial-cleaning' },
-      { label: 'Facility Maintenance', path: '/facility-maintenance' },
-      { label: 'Cleaning Supplies', path: '/cleaning-supplies' },
-      { label: 'Request a Contract Quote', path: '/contact' },
-    ],
-    seo: {
-      title: 'Business Cleaning Contracts in Gauteng | Tshigeng Holdings',
-      description:
-        'Discuss a commercial cleaning contract for your office, school, retail site or facility. Tshigeng Holdings scopes recurring cleaning around your site.',
-    },
-  },
-  '/facility-maintenance': {
-    eyebrow: 'Facility Maintenance',
-    title: 'Facility Maintenance Services',
-    highlight: 'Facility Maintenance',
-    description:
-      'Facility maintenance coordination and day-to-day site support for businesses, institutions and managed properties in Gauteng.',
-    introTitle: 'Practical support to keep facilities running',
-    intro:
-      'Tshigeng Holdings helps organisations discuss routine facility needs alongside cleaning and hygiene services. A maintenance plan can be scoped around the site, recurring checks, reported issues and the service coordination required. Specific work is confirmed after reviewing the property and request.',
-    searchFocus: ['Facility maintenance services', 'Facilities support', 'Building upkeep coordination', 'Commercial property maintenance', 'Integrated facility services'],
-    services: ['Routine facility support planning', 'Site checks and issue reporting', 'Maintenance request coordination', 'Cleaning and hygiene service coordination', 'Recurring service schedules', 'Scope review for managed facilities'],
-    industries: ['Office buildings', 'Retail properties', 'Schools', 'Healthcare facilities', 'Industrial sites', 'Managed properties'],
-    faqs: [
-      {
-        question: 'What does facility maintenance support include?',
-        answer:
-          'The scope depends on the property. Contact Tshigeng Holdings with the site details and maintenance needs so the team can confirm which support can be provided.',
-      },
-      {
-        question: 'Can maintenance be combined with cleaning and hygiene?',
-        answer:
-          'Yes. Cleaning, hygiene and facility support can be discussed together when planning services for a workplace or managed property.',
-      },
-      {
-        question: 'Do you provide facility maintenance in Pretoria and Centurion?',
-        answer:
-          'Tshigeng Holdings serves enquiries in Centurion, Pretoria and across Gauteng. Share the property location to confirm service availability.',
-      },
-    ],
-    relatedLinks: [
-      { label: 'Commercial Cleaning Contracts', path: '/commercial-cleaning-contracts' },
-      { label: 'Commercial Cleaning', path: '/commercial-cleaning' },
-      { label: 'Hygiene Services', path: '/hygiene-services' },
-      { label: 'Contact Us', path: '/contact' },
-    ],
-    seo: {
-      title: 'Facility Maintenance Services in Gauteng | Tshigeng',
-      description:
-        'Discuss facility maintenance and site support in Gauteng with Tshigeng Holdings. Combine cleaning, hygiene and recurring facility service planning.',
+        'Arrange regular or deep commercial cleaning in Gauteng with Tshigeng Holdings. Cleaning is tailored to your premises, schedule, and needs.',
     },
   },
 };
@@ -525,10 +500,10 @@ export const locationLandingPages = {
     location: 'Pretoria',
     service: 'cleaning services',
     description:
-      'Commercial, office, residential, deep cleaning, school cleaning, healthcare cleaning, and facility cleaning services for Pretoria clients.',
+      'Regular and deep cleaning for Pretoria offices, homes, commercial premises, schools, healthcare environments, and retail spaces.',
     intro:
-      'Tshigeng Holdings provides Pretoria cleaning support for businesses, homes, schools, healthcare environments, retail spaces, and managed facilities that need reliable service delivery.',
-    services: ['Office cleaning', 'Commercial cleaning', 'Residential cleaning', 'Deep cleaning', 'School cleaning', 'Retail cleaning'],
+      'Tshigeng Holdings provides cleaning services in Pretoria for offices, homes, commercial premises, schools, healthcare environments, and retail spaces. Cleaning can be tailored to the site, schedule, and areas that need attention.',
+    services: ['Regular cleaning', 'Commercial cleaning', 'Deep cleaning', 'Office cleaning', 'School cleaning', 'Retail cleaning'],
     industries: ['Offices', 'Homes', 'Schools', 'Healthcare facilities', 'Retail spaces', 'Commercial buildings'],
     faqs: [
       {
@@ -550,9 +525,9 @@ export const locationLandingPages = {
     seo: {
       title: 'Cleaning Services Pretoria | Tshigeng Holdings',
       description:
-        'Tshigeng Holdings provides cleaning services in Pretoria including office cleaning, commercial cleaning, residential cleaning, and deep cleaning.',
+        'Tshigeng Holdings provides regular and deep cleaning in Pretoria for offices, homes, commercial premises, schools, and retail spaces.',
       keywords:
-        'cleaning services Pretoria, office cleaning Pretoria, commercial cleaning Pretoria, residential cleaning Pretoria, deep cleaning Pretoria',
+        'cleaning services Pretoria, office cleaning Pretoria, commercial cleaning Pretoria, deep cleaning Pretoria',
     },
   },
   '/hygiene-services-gauteng': {

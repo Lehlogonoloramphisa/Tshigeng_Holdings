@@ -249,10 +249,7 @@ export default function Contact() {
                         <SelectContent>
                           <SelectItem value="hygiene">Hygiene Services</SelectItem>
                           <SelectItem value="pest-control">Pest Control</SelectItem>
-                          <SelectItem value="commercial-cleaning">Commercial Cleaning</SelectItem>
-                          <SelectItem value="residential-cleaning">Residential Cleaning</SelectItem>
-                          <SelectItem value="cleaning-contract">Commercial Cleaning Contract</SelectItem>
-                          <SelectItem value="facility-maintenance">Facility Maintenance</SelectItem>
+                          <SelectItem value="commercial-cleaning">Commercial Cleaning Services</SelectItem>
                           <SelectItem value="cleaning-materials">Cleaning Materials</SelectItem>
                           <SelectItem value="multiple">Multiple Services</SelectItem>
                         </SelectContent>

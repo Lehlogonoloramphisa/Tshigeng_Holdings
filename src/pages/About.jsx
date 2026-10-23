@@ -78,7 +78,7 @@ export default function About() {
               </h2>
               <div className="space-y-4 font-body text-muted-foreground leading-relaxed">
                 <p>
-                  Tshigeng Holdings CC (registration number 2011/056260/23) was established in 2011. The company provides pest control, workplace hygiene, commercial and industrial cleaning, cleaning supplies, and facility support.
+                  Tshigeng Holdings CC (registration number 2011/056260/23) was established in 2011. The company provides pest control, commercial cleaning, workplace hygiene solutions, and cleaning materials.
                 </p>
                 <p>
                   The team supports service enquiries in Centurion, Pretoria and surrounding Gauteng areas, as well as work across South Africa.
