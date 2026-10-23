@@ -170,6 +170,28 @@ img {
   }
 }
 
+@keyframes service-photo-scroll {
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.service-photo-marquee {
+  animation: service-photo-scroll 72s linear infinite;
+  will-change: transform;
+}
+
+.service-glimpse:hover .service-photo-marquee {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-photo-marquee {
+    animation: none;
+    transform: none;
+  }
+}
+
 @layer utilities {
   .bg-brand-gradient {
     background-color: rgb(31 86 132);
