@@ -28,7 +28,7 @@ export default function AffiliationsSection() {
             id="affiliations-heading"
             className="font-heading text-3xl font-bold leading-tight text-foreground md:text-4xl"
           >
-            Industry and Agriculture Credentials
+            Industry Membership
           </h2>
           <p className="mt-4 font-body leading-relaxed text-muted-foreground">
             Tshigeng Holdings is a member of SAPCA and is registered with the Department of Agriculture, Republic of South Africa.
